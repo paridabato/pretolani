@@ -1,0 +1,31 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+      "browser": true,
+      "es6": true,
+      "amd": true,
+      "jquery": true,
+      "node": true
+    },
+    "parserOptions": {
+      "sourceType": "module",
+      "allowImportExportEverywhere": true,
+      "ecmaVersion": 2017
+    },
+    "rules": {
+      "no-console": 0,
+      "quotes": ["error", "single"],
+      "no-unused-vars": "off",
+      "comma-dangle": [
+        "error",
+        {
+          "arrays": "always-multiline",
+          "objects": "always-multiline",
+          "imports": "always-multiline",
+          "exports": "always-multiline",
+          "functions": "ignore"
+        }
+      ]
+    }
+  }
+  

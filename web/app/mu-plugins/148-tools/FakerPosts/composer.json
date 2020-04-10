@@ -1,0 +1,22 @@
+{
+    "name": "agence148/fakerposts",
+    "description": "Generate fake data for wordpress CPTs",
+    "type": "wp-plugin",
+    "authors": [
+        {
+            "name": "thomas",
+            "email": "thomas@148.fr"
+        }
+    ],
+    "require": {
+        "fzaninotto/faker": "^1.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tools\\FakerPosts\\": "src/"
+        },
+        "classmap": [
+            "src/"
+        ]
+    }
+}

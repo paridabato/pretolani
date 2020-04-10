@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<ruleset name="Roots">
+  <description>Roots Coding Standards</description>
+
+  <!-- Scan all files in directory -->
+  <file>.</file>
+
+  <!-- Scan only PHP files -->
+  <arg name="extensions" value="php"/>
+
+  <!-- Ignore WordPress and Composer dependencies -->
+  <exclude-pattern>web/wp</exclude-pattern>
+  <exclude-pattern>vendor/</exclude-pattern>
+
+  <!-- Show colors in console -->
+  <arg value="-colors"/>
+
+  <!-- Show sniff codes in all reports -->
+  <arg value="ns"/>
+
+  <!-- Use PSR-2 as a base -->
+  <rule ref="PSR2"/>
+
+  <!-- Allow php files without any PHP in them -->
+  <rule ref="Internal.NoCodeFound">
+    <exclude-pattern>web/app</exclude-pattern>
+  </rule>
+
+  <!-- Allow braces on same line for named functions -->
+  <rule ref="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine">
+    <exclude-pattern>web/app/mu-plugins/148-tools/*/views</exclude-pattern>
+  </rule>
+
+  <!-- Allow closing braces to be on the same line -->
+  <rule ref="Squiz.WhiteSpace.ScopeClosingBrace">
+    <exclude-pattern>web/app/mu-plugins/148-tools/*/views</exclude-pattern>
+  </rule>
+
+  <!-- Disable newline after opening brace -->
+  <rule ref="Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace">
+    <exclude-pattern>web/app/mu-plugins/148-tools/*/views</exclude-pattern>
+  </rule>
+
+  <!-- Allow multiple PHP statements in the same line -->
+  <rule ref="Generic.Formatting.DisallowMultipleStatements.SameLine">
+    <exclude-pattern>web/app/mu-plugins/148-tools/*/views</exclude-pattern>
+  </rule>
+
+  <!-- Disable PSR-2 indentation rules that are buggy with 2 spaces -->
+  <rule ref="PSR2.ControlStructures.SwitchDeclaration.BreakIndent">
+    <exclude-pattern>web/app/mu-plugins/148-tools/*/views</exclude-pattern>
+  </rule>
+
+  <!-- Don't require a blank line after the last `use` -->
+  <rule ref="PSR2.Namespaces.UseDeclaration.SpaceAfterLastUse">
+    <exclude-pattern>web/app/mu-plugins/148-tools/*/views</exclude-pattern>
+  </rule>
+
+  <!-- Allow long lines -->
+  <rule ref="Generic.Files.LineLength.TooLong">
+    <exclude-pattern>web/app/mu-plugins/148-tools/*/views</exclude-pattern>
+  </rule>
+
+  <!-- Ignore indentation rules -->
+  <rule ref="Generic.WhiteSpace.ScopeIndent">
+    <exclude-pattern>web/app/mu-plugins/148-tools/*/views</exclude-pattern>
+  </rule>
+
+  <!-- Allow PHP closing tags -->
+  <rule ref="PSR2.Files.ClosingTag.NotAllowed">
+    <exclude-pattern>web/app/mu-plugins/148-tools/*/views</exclude-pattern>
+  </rule>
+
+  <!-- Allow PHP SideEffects in function -->
+  <rule ref="PSR1.Files.SideEffects.FoundWithSymbols">
+    <exclude-pattern>web/app/mu-plugins/148-tools/*/index.php</exclude-pattern>
+  </rule>
+</ruleset>

@@ -1,0 +1,35 @@
+# Application
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+web/app/mu-plugins/*/
+!web/app/mu-plugins/148-tools/
+!web/app/mu-plugins/148-ecotools/
+web/app/upgrade
+web/app/uploads/*
+!web/app/uploads/.gitkeep
+!web/app/plugins/wp-graphql-acf
+
+# WordPress
+web/wp
+web/.htaccess
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Composer
+vendor/
+
+# WP-CLI
+wp-cli.local.yml
+
+# Tools
+.DS_Store
+.idea
+
+# DB
+*.sql
+
+.vscode/
+.vscode/*

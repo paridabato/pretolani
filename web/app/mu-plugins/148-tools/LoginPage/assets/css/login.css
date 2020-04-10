@@ -1,0 +1,49 @@
+/**
+* Login CSS
+*/
+
+body.login {
+    background: #fbc450;
+}
+
+body.login input[type="text"]:focus, 
+body.login input[type="password"]:focus,
+body.login input[type="checkbox"]:focus,
+body.login input[type="submit"]:focus {
+    border-color: #fbc450;
+    box-shadow: 0 0 2px rgba(251, 196, 80, 0.8);
+}
+
+body.login h1 a {
+    background-image: url('../img/logo.png');
+}
+
+body.login .button-primary {
+    background: #fbc450;
+    border-color: #fbc450;
+    box-shadow: none;
+    text-shadow: none;
+    transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+body.login .button-primary:hover,
+body.login input[type="submit"]:focus,
+body.login input[type="submit"]:active {
+    background: #c58908;
+    border-color: #c58908;
+}
+
+body.login form#loginform {
+    border-radius: 6px;
+}
+
+body.login a {
+    position: relative;
+    text-decoration: none;
+    color: #fff !important;
+    transition: color 0.3s ease-in-out;
+}
+
+body.login a:hover {
+    color: #c58908 !important;
+}

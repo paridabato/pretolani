@@ -1,0 +1,99 @@
+{
+  "name": "sage",
+  "version": "9.0.9",
+  "author": "Roots <team@roots.io>",
+  "homepage": "https://roots.io/sage/",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/roots/sage.git"
+  },
+  "bugs": {
+    "url": "https://github.com/roots/sage/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "browserslist": [
+    "last 2 versions",
+    "android 4",
+    "opera 12"
+  ],
+  "scripts": {
+    "build": "yarn check:node && webpack --mode=production --progress --config resources/assets/build/webpack.config.js",
+    "build:production": "yarn check:node && webpack --env.production --progress --config resources/assets/build/webpack.config.js",
+    "build:profile": "yarn check:node && webpack --progress --profile --json --config resources/assets/build/webpack.config.js",
+    "start": "yarn check:node && webpack --mode=development --hide-modules --watch --config resources/assets/build/webpack.config.js",
+    "analyse": "webpack --profile --json > stats.json --config resources/assets/build/webpack.config.js",
+    "rmdist": "rimraf dist",
+    "lint": "npm run -s lint:scripts && npm run -s lint:styles",
+    "lint:scripts": "eslint resources/assets/scripts resources/assets/build",
+    "lint:styles": "stylelint \"resources/assets/styles/**/*.{css,sass,scss,sss,less}\"",
+    "test": "npm run -s lint",
+    "check:node": "if [[ ! $(node -v) =~ ^v10. ]]; then echo 'You must use node v10' && exit 1; fi;",
+    "webmanifest": "cp resources/browserconfig.xml.example resources/browserconfig.xml && cp resources/site.webmanifest.example resources/site.webmanifest"
+  },
+  "engines": {
+    "node": ">= 8.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "~7.7.2",
+    "@babel/plugin-syntax-dynamic-import": "~7.2.0",
+    "@babel/preset-env": "~7.7.1",
+    "autoprefixer": "~9.7.1",
+    "babel-eslint": "~10.0.3",
+    "babel-loader": "~8.0.6",
+    "browser-sync": "~2.26.7",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "bs-html-injector": "~3.0",
+    "cache-loader": "~4.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-globs-webpack-plugin": "^0.3.0",
+    "css-loader": "^3.2.0",
+    "cssnano": "~4.1.10",
+    "eslint": "~6.6.0",
+    "eslint-loader": "~3.0.1",
+    "eslint-plugin-import": "~2.18.2",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^4.2.0",
+    "friendly-errors-webpack-plugin": "^1.6.1",
+    "imagemin-mozjpeg": "~8.0.0",
+    "imagemin-webpack-plugin": "~2.4.2",
+    "import-glob": "~1.5",
+    "node-sass": "~4.13.0",
+    "postcss-loader": "~3.0.0",
+    "postcss-safe-parser": "~4.0.1",
+    "resolve-url-loader": "~2.3.1",
+    "rimraf": "~3.0.0",
+    "sass-loader": "~8.0.0",
+    "style-loader": "^1.0.0",
+    "stylelint": "^11.1.1",
+    "stylelint-config-standard": "~19.0.0",
+    "stylelint-webpack-plugin": "^1.0.3",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "url-loader": "^2.2.0",
+    "webpack-assets-manifest": "^3.1.1",
+    "webpack-bundle-analyzer": "^3.6.0",
+    "webpack-cli": "~3.3.10",
+    "webpack-dev-middleware": "~3.7.2",
+    "webpack-hot-middleware": "~2.25.0",
+    "webpack-merge": "~4.2.2",
+    "yargs": "~14.2.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "~7.7.0",
+    "bowser": "^2.7.0",
+    "dotenv-webpack": "^1.7.0",
+    "libphonenumber-js": "^1.7.26",
+    "quicklink": "^2.0.0-alpha",
+    "sass-queries": "^1.0.1",
+    "vue": "^2.6.10",
+    "vue-flatpickr-component": "^8.1.5",
+    "vuelidate": "^0.7.4",
+    "webpack": "^4.41.2",
+    "workbox-webpack-plugin": "^4.3.1"
+  }
+}

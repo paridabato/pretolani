@@ -1,0 +1,320 @@
+/* Variable */
+$gdpr-text-color: #000;
+$gdpr-background: #efefef;
+
+.gdpr {
+  z-index: 99;
+  display: none;
+  color: $gdpr-text-color;
+
+  &.active {
+    display: block;
+  }
+
+  button {
+    color: $gdpr-text-color;
+  }
+
+  /* Bar  */
+  &-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: fixed;
+    padding: 1em 2em;
+    background: $gdpr-background;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    box-sizing: border-box;
+    transition: opacity ease 400ms;
+
+    &.bar {
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      .gdpr-bar__notice {
+        flex: 1;
+      }
+    }
+
+    &.cube {
+      bottom: 1em;
+      right: 1em;
+      max-width: 500px;
+      width: calc(100% - 2em);
+      justify-content: flex-end;
+
+      .gdpr-bar__notice {
+        flex: 0 0 100%;
+      }
+    }
+
+    &.show {
+      opacity: 1;
+      pointer-events: initial;
+    }
+
+    &__notice {
+      text-align: left;
+      font-size: 0.7em;
+    }
+
+    &__button--modal,
+    &__button--agree {
+      margin-left: 1em;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 1em 1.5em;
+      transition: opacity ease 400ms;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+
+    &__button--modal {
+      background: none;
+    }
+  }
+
+  /* Modal */
+  &-modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background-color: rgba(50, 50, 50, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity ease 400ms;
+
+    &.show {
+      opacity: 1;
+      pointer-events: initial;
+    }
+
+    &__container {
+      position: relative;
+      max-width: 1000px;
+      max-height: 70vh;
+      width: 80%;
+      height: 30em;
+      padding: 2em;
+      background-color: #fff;
+      display: flex;
+    }
+
+    &__navigation {
+      text-align: right;
+      white-space: nowrap;
+      padding-right: 1em;
+      margin-right: 1em;
+      border-right: 1px solid $gdpr-background;
+    }
+
+    &__privacy {
+      margin-top: 1em;
+      display: block;
+    }
+
+    &__button {
+      cursor: pointer;
+      opacity: 0.6;
+      transition: opacity ease 400ms;
+
+      &:hover,
+      &.active {
+        opacity: 1;
+      }
+    }
+
+    &__information {
+      text-align: left;
+      position: relative;
+      flex: 1;
+    }
+
+    &__description {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: calc(100% - 70px);
+      width: 100%;
+      overflow-y: auto;
+
+      &[data-target] {
+        display: none;
+      }
+
+      &.active {
+        display: block;
+      }
+    }
+
+    &__footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 50px;
+      width: 100%;
+    }
+
+    &__footer--button {
+      height: 50px;
+      padding: 1em 2em;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      transition: opacity ease 400ms;
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      &--agree {
+        background-color: $gdpr-background;
+      }
+
+      &--disagree {
+        background-color: $gdpr-text-color;
+        color: $gdpr-background !important;
+      }
+    }
+
+    &__close {
+      position: absolute;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      top: 1em;
+      right: 1em;
+      font-size: 1em;
+      padding: 0;
+      background-color: transparent;
+    }
+
+    &__title {
+      font-size: 1.5em;
+    }
+
+    /* Switch Button */
+    &__switch {
+      position: relative;
+      width: 74px;
+      height: 36px;
+      margin-top: 1em;
+      overflow: hidden;
+
+      &.hidden {
+        display: none;
+      }
+    }
+
+    &__switch.r,
+    &__switch.r .layer {
+      border-radius: 100px;
+    }
+
+    &__switch .knobs,
+    &__switch .layer {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    &__switch .knobs {
+      z-index: 2;
+    }
+
+    &__switch .layer {
+      width: 100%;
+      background-color: #d9f9da;
+      transition: 0.3s ease all;
+      z-index: 1;
+    }
+
+    &__switch .checkbox {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      opacity: 0;
+      cursor: pointer;
+      z-index: 3;
+    }
+
+    &__switch .knobs::before {
+      content: "OUI";
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: 20px;
+      height: 10px;
+      color: #fff;
+      font-size: 8px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 12px;
+      padding: 9px 4px;
+      background-color: #4aa94f;
+      border-radius: 50%;
+      transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+    }
+
+    &__switch .checkbox:checked + .knobs::before {
+      content: "NON";
+      left: 42px;
+      background-color: #f44336;
+    }
+
+    &__switch .checkbox:checked ~ .layer {
+      background-color: #fcebeb;
+    }
+
+    &__switch .knobs,
+    #button-1 .knobs::before,
+    #button-1 .layer {
+      transition: 0.3s ease all;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    &-bar {
+      &__notice {
+        flex: 0 0 100% !important;
+      }
+
+      &__button {
+        &--modal {
+          margin-left: 0;
+          padding-left: 0;
+        }
+      }
+    }
+
+    &-modal {
+      &__container {
+        flex-direction: column;
+      }
+
+      &__navigation {
+        text-align: left;
+        border-right: none;
+        border-bottom: 1px solid $gdpr-background;
+        margin-right: 0;
+        margin-bottom: 1em;
+      }
+    }
+  }
+}

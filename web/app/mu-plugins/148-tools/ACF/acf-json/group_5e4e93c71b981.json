@@ -1,0 +1,293 @@
+{
+    "key": "group_5e4e93c71b981",
+    "title": "Free section",
+    "fields": [
+        {
+            "key": "field_5e4e93f07fb82",
+            "label": "Blocs",
+            "name": "blocs",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "acfe_permissions": "",
+            "acfe_flexible_stylised_button": 0,
+            "acfe_flexible_hide_empty_message": 0,
+            "acfe_flexible_empty_message": "",
+            "acfe_flexible_layouts_thumbnails": 1,
+            "acfe_flexible_layouts_templates": 0,
+            "acfe_flexible_close_button": 0,
+            "acfe_flexible_copy_paste": 0,
+            "acfe_flexible_modal_edition": 0,
+            "acfe_flexible_modal": {
+                "acfe_flexible_modal_enabled": "0"
+            },
+            "acfe_flexible_layouts_state": "",
+            "layouts": {
+                "layout_5e4e940e830c6": {
+                    "key": "layout_5e4e940e830c6",
+                    "name": "bloc_image",
+                    "label": "B1 — Image",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e4e94427fb83",
+                            "label": "Image",
+                            "name": "bloc_image_image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "show_in_graphql": 1,
+                            "acfe_permissions": "",
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": 1700,
+                            "max_height": 1000,
+                            "max_size": "",
+                            "mime_types": "",
+                            "acfe_thumbnail": 0,
+                            "acfe_validate": "",
+                            "acfe_update": ""
+                        },
+                        {
+                            "key": "field_5e4e94767fb84",
+                            "label": "Description",
+                            "name": "bloc_image_text",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "show_in_graphql": 1,
+                            "acfe_permissions": "",
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "acfe_validate": "",
+                            "acfe_update": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_thumbnail": ""
+                },
+                "layout_5e4e948f7fb85": {
+                    "key": "layout_5e4e948f7fb85",
+                    "name": "bloc_text",
+                    "label": "B2 — Texte libre",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e4e94967fb86",
+                            "label": "Contenu",
+                            "name": "bloc_text_content",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "show_in_graphql": 1,
+                            "acfe_permissions": "",
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": "",
+                            "acfe_validate": "",
+                            "acfe_update": ""
+                        },
+                        {
+                            "key": "field_5e4e94b37fb87",
+                            "label": "WYSIWYG",
+                            "name": "bloc_wysiwyg",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "show_in_graphql": 1,
+                            "acfe_permissions": "",
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0,
+                            "acfe_validate": "",
+                            "acfe_update": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_thumbnail": ""
+                },
+                "layout_5e5683e50e3ff": {
+                    "key": "layout_5e5683e50e3ff",
+                    "name": "bloc_image_text_link",
+                    "label": "B3 — Image Text Link",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e5684370e400",
+                            "label": "Image",
+                            "name": "bloc_image_text_link_image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "show_in_graphql": 1,
+                            "acfe_permissions": "",
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "acfe_thumbnail": 0,
+                            "acfe_validate": "",
+                            "acfe_update": ""
+                        },
+                        {
+                            "key": "field_5e5684840e401",
+                            "label": "Titre",
+                            "name": "bloc_image_text_link_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "show_in_graphql": 1,
+                            "acfe_permissions": "",
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "acfe_validate": "",
+                            "acfe_update": ""
+                        },
+                        {
+                            "key": "field_5e56849b0e402",
+                            "label": "Texte",
+                            "name": "bloc_image_text_link_text",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "show_in_graphql": 1,
+                            "acfe_permissions": "",
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0,
+                            "acfe_validate": "",
+                            "acfe_update": ""
+                        },
+                        {
+                            "key": "field_5e5684e20e404",
+                            "label": "Lien",
+                            "name": "bloc_image_text_link_link",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "show_in_graphql": 1,
+                            "acfe_permissions": "",
+                            "return_format": "array",
+                            "acfe_validate": "",
+                            "acfe_update": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_thumbnail": ""
+                }
+            },
+            "button_label": "Ajouter un élément",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-freeSectionTemplate.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 1,
+    "description": "",
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_permissions": "",
+    "acfe_note": "",
+    "show_in_graphql": 1,
+    "graphql_field_name": "freeSection",
+    "acfe_meta": "",
+    "modified": 1582817398
+}

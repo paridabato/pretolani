@@ -1,0 +1,1 @@
+// Here Safari Polyfill

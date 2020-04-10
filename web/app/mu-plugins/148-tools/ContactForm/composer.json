@@ -1,0 +1,15 @@
+{
+    "name": "agence148/contact-form",
+    "description": "Ready to use contact form for WP",
+    "type": "wp-plugin",
+    "authors": [
+        {
+            "name": "thomas",
+            "email": "thomas@148.fr"
+        }
+    ],
+    "require": {
+        "jenssegers/blade": "^1.2",
+        "illuminate/view": "~5.6"
+    }
+}

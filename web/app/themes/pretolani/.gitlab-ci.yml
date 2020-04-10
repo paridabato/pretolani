@@ -1,0 +1,26 @@
+#
+# Variables you need to define in your project .gitlab-ci.yml :
+# - PHPCS_ROOT (required)
+#
+# Sage defines its own PHPCS rules
+# @see: https://github.com/roots/sage/blob/master/phpcs.xml
+#
+
+variables:
+  PHPCS_ROOT: .
+
+phpcs_sage:
+  image: php:7.2-fpm-alpine
+  stage: test
+  before_script:
+    - EXPECTED_SIGNATURE="$(wget -q -O - https://composer.github.io/installer.sig)"
+    - php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+    - ACTUAL_SIGNATURE="$(php -r "echo hash_file('sha384', 'composer-setup.php');")"
+    - if [ "$EXPECTED_SIGNATURE" != "$ACTUAL_SIGNATURE" ]; then rm composer-setup.php && exit 1; fi
+    - php composer-setup.php --quiet
+    - rm composer-setup.php
+    - mv composer.phar /usr/local/bin/composer
+  script:
+    - cd $PHPCS_ROOT
+    - composer install --ignore-platform-reqs
+    - composer test

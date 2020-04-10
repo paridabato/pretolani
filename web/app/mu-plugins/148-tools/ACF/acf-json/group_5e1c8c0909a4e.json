@@ -1,0 +1,451 @@
+{
+    "key": "group_5e1c8c0909a4e",
+    "title": "Schema Local SEO",
+    "fields": [
+        {
+            "key": "field_5e2579e965488",
+            "label": "Ajouter le schema du générateur",
+            "name": "add_generator_schema",
+            "type": "radio",
+            "instructions": "Generateur de Schema SEO : <a href=\"https:\/\/technicalseo.com\/tools\/schema-markup-generator\/\" target=\"_blank\">Schema Markup Generator<\/a>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "acfe_permissions": "",
+            "choices": {
+                "no": "Non",
+                "yes": "Oui"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "no",
+            "layout": "horizontal",
+            "return_format": "value",
+            "acfe_validate": "",
+            "acfe_update": "",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5e257a5265489",
+            "label": "Schema SEO",
+            "name": "scheme_all",
+            "type": "textarea",
+            "instructions": "Veuillez copier\/coller le résultat du générateur ici",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e2579e965488",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "",
+            "wpml_cf_preferences": 1,
+            "acfe_validate": "",
+            "acfe_update": ""
+        },
+        {
+            "key": "field_5e1c8ca510a49",
+            "label": "Nom de l'organisation",
+            "name": "scheme_organisation_name",
+            "type": "text",
+            "instructions": "Par défaut reprendra le nom du site",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e2579e965488",
+                        "operator": "==",
+                        "value": "no"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "acfe_permissions": "",
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "acfe_validate": "",
+            "acfe_update": ""
+        },
+        {
+            "key": "field_5e1c90b010a4b",
+            "label": "Nom légal de l'organisation",
+            "name": "scheme_organisation_legalName",
+            "type": "text",
+            "instructions": "Par défaut reprendra le nom du site",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e2579e965488",
+                        "operator": "==",
+                        "value": "no"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "acfe_permissions": "",
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "acfe_validate": "",
+            "acfe_update": ""
+        },
+        {
+            "key": "field_5e1d97a96f6f4",
+            "label": "Description de l'organisation",
+            "name": "scheme_organisation_description",
+            "type": "text",
+            "instructions": "Par défaut reprendra la meta description de la page d'accueil",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e2579e965488",
+                        "operator": "==",
+                        "value": "no"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "acfe_permissions": "",
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "acfe_validate": "",
+            "acfe_update": ""
+        },
+        {
+            "key": "field_5e1c90c610a4c",
+            "label": "Logo de l'organisation",
+            "name": "scheme_organisation_logo",
+            "type": "image",
+            "instructions": "Par défaut reprendra le logo du site",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e2579e965488",
+                        "operator": "==",
+                        "value": "no"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "acfe_permissions": "",
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "acfe_thumbnail": 0,
+            "acfe_validate": "",
+            "acfe_update": ""
+        },
+        {
+            "key": "field_5e1c90f710a4d",
+            "label": "Adresse de l'organisation",
+            "name": "scheme_organisation_address",
+            "type": "group",
+            "instructions": "Si ces champs sont vides aucune adresse ne sera affiché",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e2579e965488",
+                        "operator": "==",
+                        "value": "no"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "acfe_permissions": "",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5e1c922410a4e",
+                    "label": "Rue",
+                    "name": "scheme_organisation_streetAddress",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "acfe_permissions": "",
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "acfe_validate": "",
+                    "acfe_update": ""
+                },
+                {
+                    "key": "field_5e1c925510a4f",
+                    "label": "Ville",
+                    "name": "scheme_organisation_addressLocality",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "acfe_permissions": "",
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "acfe_validate": "",
+                    "acfe_update": ""
+                },
+                {
+                    "key": "field_5e1c927c10a50",
+                    "label": "Region",
+                    "name": "scheme_organisation_addressRegion",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "acfe_permissions": "",
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "acfe_validate": "",
+                    "acfe_update": ""
+                },
+                {
+                    "key": "field_5e1c928c10a51",
+                    "label": "Code postal",
+                    "name": "scheme_organisation_postalCode",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "acfe_permissions": "",
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "acfe_validate": "",
+                    "acfe_update": ""
+                },
+                {
+                    "key": "field_5e1c92e510a52",
+                    "label": "Pays",
+                    "name": "scheme_organisation_addressCountry",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 1,
+                    "acfe_permissions": "",
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "acfe_validate": "",
+                    "acfe_update": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5e1c934b10a53",
+            "label": "Téléphone de l'organisation",
+            "name": "scheme_organisation_telephone",
+            "type": "text",
+            "instructions": "Si ce champ est vide il ne sera pas affiché",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e2579e965488",
+                        "operator": "==",
+                        "value": "no"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "acfe_permissions": "",
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "acfe_validate": "",
+            "acfe_update": ""
+        },
+        {
+            "key": "field_5e1c987b82ec5",
+            "label": "Email de l'organisation",
+            "name": "scheme_organisation_email",
+            "type": "email",
+            "instructions": "Si ce champ est vide il ne sera pas affiché",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e2579e965488",
+                        "operator": "==",
+                        "value": "no"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "acfe_permissions": "",
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "acfe_validate": "",
+            "acfe_update": ""
+        },
+        {
+            "key": "field_5e1d90a3d08da",
+            "label": "URL du site de l'organisation",
+            "name": "scheme_organisation_url",
+            "type": "url",
+            "instructions": "Par défaut reprend l'URL du site",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e2579e965488",
+                        "operator": "==",
+                        "value": "no"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "acfe_permissions": "",
+            "default_value": "",
+            "placeholder": "",
+            "acfe_validate": "",
+            "acfe_update": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "schema-local-seo"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_permissions": "",
+    "acfe_note": "",
+    "acfe_meta": "",
+    "modified": 1579514812
+}

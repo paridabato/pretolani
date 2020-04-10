@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./scripts/routes/about.js"],"names":["init"],"mappings":";;;;;;;;;;AAAA;AAAe;AACbA,MADa,kBACN,CACL;AACD;AAHY,CAAf,E","file":"scripts/about.js","sourcesContent":["export default {\n  init() {\n    // JavaScript to be fired on the about us page\n  },\n};\n"],"sourceRoot":""}
