@@ -1,0 +1,17 @@
+include:
+  - project: 'devops/gitlab-ci-148-template'
+    file: 'test/.phpcs.sage.gitlab-ci.yml'
+
+  - project: 'devops/gitlab-ci-148-template'
+    file: 'deploy/.trellis.gitlab-ci.yml'
+
+variables:
+  THEME_PATH: web/app/themes/pretolani
+
+  TRELLIS_LOCAL_PATH: site
+  TRELLIS_ENV_MASTER: production
+  TRELLIS_ENV_STAGING: production
+  TRELLIS_SITE_MASTER: pretolani.com
+  TRELLIS_SITE_STAGING: demo.pretolani.com
+
+  PHPCS_ROOT: $THEME_PATH
