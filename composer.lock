@@ -4,14 +4,14 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e545d4d6b68e87a809758a048c7d7414",
+    "content-hash": "626aaa1e4b1ad25bff9abfb88b643dc4",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
             "version": "5.8.4",
             "dist": {
                 "type": "zip",
-                "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}&t=5.8.4"
+                "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}&t=5.8.4#v5.8.4"
             },
             "require": {
                 "composer/installers": "^1.4",
@@ -301,16 +301,16 @@
         },
         {
             "name": "roots/wordpress",
-            "version": "5.3.2",
+            "version": "5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress.git",
-                "reference": "5.3.2"
+                "reference": "5.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WordPress/WordPress/zipball/5.3.2",
-                "reference": "5.3.2"
+                "url": "https://api.github.com/repos/WordPress/WordPress/zipball/5.4",
+                "reference": "5.4"
             },
             "require": {
                 "php": ">=5.3.2",
@@ -334,7 +334,13 @@
                 "cms",
                 "wordpress"
             ],
-            "time": "2019-12-18T22:19:57+00:00"
+            "funding": [
+                {
+                    "url": "https://www.patreon.com/rootsdev",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2020-03-31T20:06:05+00:00"
         },
         {
             "name": "roots/wordpress-core-installer",
@@ -682,16 +688,16 @@
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "v3.6.2",
+            "version": "v3.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "786a947e57086cf236cefdee80784634224b99fa"
+                "reference": "1b3103013797f04521c6cae5560f604649484066"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/786a947e57086cf236cefdee80784634224b99fa",
-                "reference": "786a947e57086cf236cefdee80784634224b99fa",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/1b3103013797f04521c6cae5560f604649484066",
+                "reference": "1b3103013797f04521c6cae5560f604649484066",
                 "shasum": ""
             },
             "require": {
@@ -741,7 +747,7 @@
                 "env",
                 "environment"
             ],
-            "time": "2020-03-27T23:36:02+00:00"
+            "time": "2020-04-12T15:18:03+00:00"
         },
         {
             "name": "wpackagist-plugin/acf-extended",
@@ -856,7 +862,7 @@
             "version": "1.4.0",
             "dist": {
                 "type": "zip",
-                "url": "https://wpml.org/?download=1097589&user_id={%WPML_USERID}&subscription_key={%WPML_PRO_KEY}&version=1.4.0"
+                "url": "https://wpml.org/?download=1097589&user_id={%WPML_USERID}&subscription_key={%WPML_PRO_KEY}&version=1.4.0#v1.4.0"
             },
             "type": "wordpress-plugin"
         },
@@ -865,7 +871,7 @@
             "version": "1.0.1",
             "dist": {
                 "type": "zip",
-                "url": "https://wpml.org/?download=3566177&user_id={%WPML_USERID}&subscription_key={%WPML_PRO_KEY}&version=1.0.1"
+                "url": "https://wpml.org/?download=3566177&user_id={%WPML_USERID}&subscription_key={%WPML_PRO_KEY}&version=1.0.1#v1.0.1"
             },
             "type": "wordpress-plugin"
         },
@@ -874,7 +880,7 @@
             "version": "4.2.9",
             "dist": {
                 "type": "zip",
-                "url": "https://wpml.org/?download=6088&user_id={%WPML_USERID}&subscription_key={%WPML_PRO_KEY}&version=4.2.9"
+                "url": "https://wpml.org/?download=6088&user_id={%WPML_USERID}&subscription_key={%WPML_PRO_KEY}&version=4.2.9#v4.2.9"
             },
             "type": "wordpress-plugin"
         },
@@ -883,7 +889,7 @@
             "version": "2.10.7",
             "dist": {
                 "type": "zip",
-                "url": "https://wpml.org/?download=6092&user_id={%WPML_USERID}&subscription_key={%WPML_PRO_KEY}&version=2.10.7"
+                "url": "https://wpml.org/?download=6092&user_id={%WPML_USERID}&subscription_key={%WPML_PRO_KEY}&version=2.10.7#v2.10.7"
             },
             "type": "wordpress-plugin"
         }
@@ -895,12 +901,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "0f73cf4b4b9227eb8845723bc2a8869bc4dd6e8f"
+                "reference": "09afa996c68c18f49e6487b06adcb2ef27da61fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/0f73cf4b4b9227eb8845723bc2a8869bc4dd6e8f",
-                "reference": "0f73cf4b4b9227eb8845723bc2a8869bc4dd6e8f",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/09afa996c68c18f49e6487b06adcb2ef27da61fa",
+                "reference": "09afa996c68c18f49e6487b06adcb2ef27da61fa",
                 "shasum": ""
             },
             "conflict": {
@@ -1021,7 +1027,7 @@
                 "serluck/phpwhois": "<=4.2.6",
                 "shopware/shopware": "<5.3.7",
                 "silverstripe/admin": ">=1.0.3,<1.0.4|>=1.1,<1.1.1",
-                "silverstripe/assets": ">=1,<1.3.5|>=1.4,<1.4.4",
+                "silverstripe/assets": ">=1,<1.4.7|>=1.5,<1.5.2",
                 "silverstripe/cms": "<4.3.6|>=4.4,<4.4.4",
                 "silverstripe/comments": ">=1.3,<1.9.99|>=2,<2.9.99|>=3,<3.1.1",
                 "silverstripe/forum": "<=0.6.1|>=0.7,<=0.7.3",
@@ -1151,7 +1157,7 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2020-03-31T14:30:16+00:00"
+            "time": "2020-04-15T04:56:51+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
@@ -1273,5 +1279,6 @@
     "platform": {
         "php": ">=7.1"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }

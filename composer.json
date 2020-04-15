@@ -123,7 +123,7 @@
     "advanced-custom-fields/advanced-custom-fields-pro": "^5.0.0",
     "composer/installers": "^1.7",
     "oscarotero/env": "^1.2.0",
-    "roots/wordpress": "5.3.2",
+    "roots/wordpress": "~5.4",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "rosell-dk/webp-convert": "^2.3",
@@ -171,30 +171,14 @@
     }
   },
   "scripts": {
-    "init-sage": [
-      "composer require wpml/wpml-multilingual-cms",
-      "composer require wpml/wpml-string-translation",
-      "composer require wpml/acfml",
-      "composer require wpml/wp-seo-multilingual",
-      "rm -rf web/app/mu-plugins/148-ecotools",
-      "rm -rf web/app/themes/headless",
-      "cd web/app/mu-plugins && php composer-cascade.php install"
-    ],
-    "init-nuxt": [
-      "composer require wpackagist-plugin/polylang",
-      "composer require wpackagist-plugin/acf-to-rest-api",
-      "composer require valu-digital/wp-graphql-polylang",
-      "composer require wp-graphql/wp-graphiql",
-      "composer require wp-graphql/wp-graphql",
-      "composer require wp-graphql/wp-graphql-acf",
-      "composer require ashhitch/wp-graphql-yoast-seo",
-      "cd web/app/mu-plugins && php composer-cascade.php install"
-    ],
     "post-root-package-install": [
       "php -r \"copy('.env.example', '.env');\""
     ],
     "test": [
       "phpcs"
+    ],
+    "post-install-cmd": [
+      "cd web/app/mu-plugins && php composer-cascade.php install"
     ]
   }
 }
