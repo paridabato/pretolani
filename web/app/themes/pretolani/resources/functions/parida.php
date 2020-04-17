@@ -1,6 +1,8 @@
 <?php
 
-use function App\asset_path;
+namespace App;
+
+use Roots\Sage\Container;
 
 add_action( 'wp_enqueue_scripts', 'wp_enqueue_scripts_parida' );
 function wp_enqueue_scripts_parida() {
