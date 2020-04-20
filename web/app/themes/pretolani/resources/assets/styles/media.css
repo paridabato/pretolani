@@ -1,0 +1,9 @@
+@media screen and (max-width: 1400px) {
+	html {
+		font-size: 8px;
+	}
+
+	.wrapper {
+		width: 1240px;
+	}
+}
