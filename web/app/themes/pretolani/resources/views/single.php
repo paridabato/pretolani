@@ -7,11 +7,6 @@
 
 ?>
 
-<?php 
-/*    set_query_var('addclass', 'no-bottom-padding');
-    get_template_part('partials/text-block'); */
-?>
-
 <div class="onepage" id="main">
 
     <section class="page-section section section_nav section-black">
@@ -22,7 +17,7 @@
                         <div class="swiper-slide">
                             <div class="section-slide">
                                 <div class="section-slide__wrapper wrapper"><h2 class="section-slide__text section-title sep-letters">Projet<br>Particulier un</h2></div>
-                                <img class="section-slide__image" src="<?php echo $tp ?>/img/slide-demo.png" />
+                                <img class="section-slide__image" src="<?php echo $tp;?>/img/slide-demo.png" />
                             </div>
                         </div>
                     <?php endfor; ?>

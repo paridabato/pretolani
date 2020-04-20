@@ -7,11 +7,6 @@
 
 ?>
 
-<?php 
-/*    set_query_var('addclass', 'no-bottom-padding');
-    get_template_part('partials/text-block'); */
-?>
-
 <div class="onepage" id="main">
 
     <?php get_template_part('partials/loader'); ?>

@@ -10,18 +10,12 @@ Template Name: Teams
 
     global $tp;
     global $mob;
-
-?>
-
-<?php 
-/*    set_query_var('addclass', 'no-bottom-padding');
-    get_template_part('partials/text-block'); */
 ?>
 
 <div class="onepage" id="main">
 
     <?php get_template_part('partials/loader'); ?>
-    
+
     <section class="page-section section section_creators">
         <div class="section__wrapper wrapper">
             <div class="flex-row flex-row_relative">
@@ -52,7 +46,7 @@ Template Name: Teams
                 <div class="swiper-wrapper">
                     <?php for($i = 0; $i < 5; $i++) : ?>
                         <div class="swiper-slide">
-                            <div class="gallery-slide-alt"><img src="<?php echo $tp ?>/img/slide-demo-alt.png" /></div>                                
+                            <div class="gallery-slide-alt"><img src="<?php echo $tp ?>/img/slide-demo-alt.png" /></div>
                         </div>
                     <?php endfor; ?>
                 </div>

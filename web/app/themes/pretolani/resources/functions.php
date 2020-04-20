@@ -255,5 +255,3 @@ function language_selector_flags()
         }
     }
 }
-
-

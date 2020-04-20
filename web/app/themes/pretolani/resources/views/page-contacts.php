@@ -4,24 +4,18 @@ Template Name: Contacts
 */
 ?>
 
-<?php get_header(); ?>
+<?php get_header();?>
 
 <?php
 
     global $tp;
     global $mob;
-
-?>
-
-<?php 
-/*    set_query_var('addclass', 'no-bottom-padding');
-    get_template_part('partials/text-block'); */
 ?>
 
 <div class="onepage" id="main">
 
-    <?php get_template_part('partials/loader'); ?>
-    
+    <?php get_template_part('partials/loader');?>
+
     <section class="page-section section section-black">
         <div class="section__wrapper wrapper">
             <div class="flex-row">
@@ -55,4 +49,4 @@ Template Name: Contacts
     }
 </style>
 
-<?php get_footer(); ?>
+<?php get_footer();?>
