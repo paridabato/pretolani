@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Nimbus Sans D OT';
+    src: url('NimbusSansDOT-Ligh.eot');
+    src: url('NimbusSansDOT-Ligh.eot?#iefix') format('embedded-opentype'),
+        url('NimbusSansDOT-Ligh.woff2') format('woff2'),
+        url('NimbusSansDOT-Ligh.woff') format('woff'),
+        url('NimbusSansDOT-Ligh.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nimbus Sans D OT';
+    src: url('NimbusSansDOT-Regu.eot');
+    src: url('NimbusSansDOT-Regu.eot?#iefix') format('embedded-opentype'),
+        url('NimbusSansDOT-Regu.woff2') format('woff2'),
+        url('NimbusSansDOT-Regu.woff') format('woff'),
+        url('NimbusSansDOT-Regu.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Wasa';
+    src: url('Wasa-Light.eot');
+    src: url('Wasa-Light.eot?#iefix') format('embedded-opentype'),
+        url('Wasa-Light.woff2') format('woff2'),
+        url('Wasa-Light.woff') format('woff'),
+        url('Wasa-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
