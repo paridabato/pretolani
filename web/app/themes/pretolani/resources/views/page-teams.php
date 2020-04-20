@@ -44,7 +44,7 @@ Template Name: Teams
             </div>
             <div class="swiper-container gallery-slider-alt">
                 <div class="swiper-wrapper">
-                    <?php for($i = 0; $i < 5; $i++) : ?>
+                    <?php for($i = 0; $i < 5; $i++) :?>
                         <div class="swiper-slide">
                             <div class="gallery-slide-alt"><img src="<?php echo $tp ?>/img/slide-demo-alt.png" /></div>
                         </div>

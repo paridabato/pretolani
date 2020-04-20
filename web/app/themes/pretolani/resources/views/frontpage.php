@@ -7,20 +7,13 @@ Template Name: Homepage
 <?php get_header(); ?>
 
 <?php
-
     global $tp;
     global $mob;
-
-?>
-
-<?php 
-/*    set_query_var('addclass', 'no-bottom-padding');
-    get_template_part('partials/text-block'); */
 ?>
 
 <div id="main">
     <?php get_template_part('partials/loader'); ?>
-    
+
     <section class="page-section section section_creators">
         <div class="section__wrapper wrapper">
             <div class="flex-row flex-row_relative">

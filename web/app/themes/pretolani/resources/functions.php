@@ -163,7 +163,6 @@ function load_js_css()
     wp_enqueue_script('wow', get_template_directory_uri() . '/js/wow.js', array('jquery'), null, false);
     wp_enqueue_script('swiper', get_template_directory_uri() . '/js/swiper.min.js', array('jquery'), null, false);
     wp_enqueue_script('script', get_template_directory_uri() . '/js/script.js', array('jquery'), null, false);
-
 }
 
 add_action('wp_enqueue_scripts', 'load_js_css');

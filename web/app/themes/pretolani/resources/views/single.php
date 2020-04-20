@@ -13,14 +13,14 @@
         <div class="section-slider-wrap fw">
             <div class="swiper-container section-slider">
                 <div class="swiper-wrapper">
-                    <?php for($i = 0; $i < 5; $i++) : ?>
-                        <div class="swiper-slide">
+                    <?php for($i = 0; $i < 5; $i++){?>
+                        <div class="swiper-slide">x`
                             <div class="section-slide">
                                 <div class="section-slide__wrapper wrapper"><h2 class="section-slide__text section-title sep-letters">Projet<br>Particulier un</h2></div>
                                 <img class="section-slide__image" src="<?php echo $tp;?>/img/slide-demo.png" />
                             </div>
                         </div>
-                    <?php endfor; ?>
+                    <?php }?>
                 </div>
             </div>
             <div class="section-slider-nav">

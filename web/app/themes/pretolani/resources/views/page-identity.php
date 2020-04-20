@@ -13,15 +13,10 @@ Template Name: Identity
 
 ?>
 
-<?php 
-/*    set_query_var('addclass', 'no-bottom-padding');
-    get_template_part('partials/text-block'); */
-?>
-
 <div class="onepage" id="main">
 
     <?php get_template_part('partials/loader'); ?>
-    
+
     <section class="page-section section section_creators">
         <div class="section__wrapper wrapper">
             <div class="flex-row flex-row_relative">
@@ -50,12 +45,12 @@ Template Name: Identity
             </div>
             <div class="swiper-container gallery-slider">
                 <div class="swiper-wrapper">
-                    <?php for($i = 0; $i < 5; $i++) : ?>
+                    <?php for($i = 0; $i < 5; $i++) :?>
                         <div class="swiper-slide">
                             <div class="gallery-slide">
                                 <div class="gallery-slide__title">Naissance</div>
                                 <div class="gallery-slide__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia erat nec tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit  lacinia erat nec tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
-                                <div class="gallery-slide__image"><img src="<?php echo $tp ?>/img/slide-demo.png" /></div>                                
+                                <div class="gallery-slide__image"><img src="<?php echo $tp ?>/img/slide-demo.png" /></div>
                             </div>
                         </div>
                     <?php endfor; ?>

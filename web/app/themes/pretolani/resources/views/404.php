@@ -13,11 +13,6 @@ Template Name: Identity
 
 ?>
 
-<?php 
-/*    set_query_var('addclass', 'no-bottom-padding');
-    get_template_part('partials/text-block'); */
-?>
-
 <div class="onepage" id="main">
     <section class="page-section section section_logo">
         <div class="section__wrapper wrapper">
