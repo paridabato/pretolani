@@ -12,14 +12,7 @@ $logo = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 346.2 47.97"><defs
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
-<head>
-  <meta charset="<?php bloginfo('charset');?>">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-  <link rel="shortcut icon" href="<?= $tp;?>/favicon.ico" type="image/x-icon">
-  <title><?php wp_title();?></title>
-  <?php wp_head();?>
-</head>
+
 <body <?php body_class();?>>
 
 <header class="header fw">
@@ -32,4 +25,3 @@ $logo = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 346.2 47.97"><defs
     </div>
   </div>
 </header>
-
