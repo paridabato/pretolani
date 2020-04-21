@@ -254,9 +254,3 @@ function language_selector_flags()
         }
     }
 }
-
-
-if (isset($_GET['parida'])) {
-    global $wpdb;
-    var_dump($wpdb);
-}
