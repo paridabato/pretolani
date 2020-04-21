@@ -1,6 +1,5 @@
 @extends('layouts.app')
 @section('content')
-  @include('partials.page-header')
   <div class="onepage" id="main">
     <section class="page-section section section_logo">
       <div class="section__wrapper wrapper">
