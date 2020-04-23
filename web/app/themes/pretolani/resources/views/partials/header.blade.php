@@ -1,10 +1,10 @@
-<header class="banner">
-  <div class="container">
-    <a class="brand" href="{{ home_url('/') }}">{{ get_bloginfo('name', 'display') }}</a>
-    <nav class="nav-primary">
-      @if (has_nav_menu('primary_navigation'))
-        {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
-      @endif
-    </nav>
+<header class="header fw">
+  <div class="header__wrapper wrapper">
+    <a class="header__logo logo" href="@php echo home_url();@endphp" title="logo">@php echo gv('logo');@endphp</a>
+    <div class="header__langs langs">@php echo language_selector_flags();@endphp</div>
+    <div class="header__menu-trigger menu-trigger">
+      <div class="menu-trigger__lines"><i></i><i></i></div>
+      <div class="menu-trigger__text">MENU</div>
+    </div>
   </div>
 </header>
