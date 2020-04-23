@@ -24,7 +24,7 @@
         <div class="section__wrapper wrapper">
             <div class="flex-row">
                 <div class="flex-block">
-                    <div class="bg-image bg-image_bottom"><img src="<?php echo $tp ?>/img/achiev-1.png"></div>
+                    <div class="bg-image bg-image_bottom"><img src="<?php echo $tp ?>/images/achiev-1.png"></div>
                 </div>
                 <div class="flex-block flex-block_text flex-block_bottom">
                     <div class="flex-block__content">
@@ -42,7 +42,7 @@
         <div class="section__wrapper wrapper">
             <div class="flex-row flex-row_swap">
                 <div class="flex-block">
-                    <div class="bg-image bg-image_bottom"><img src="<?php echo $tp ?>/img/achiev-1.png"></div>
+                    <div class="bg-image bg-image_bottom"><img src="<?php echo $tp ?>/images/achiev-1.png"></div>
                 </div>
                 <div class="flex-block flex-block_text flex-block_bottom">
                     <div class="flex-block__content">
@@ -60,7 +60,7 @@
         <div class="section__wrapper wrapper">
             <div class="flex-row">
                 <div class="flex-block">
-                    <div class="bg-image bg-image_bottom"><img src="<?php echo $tp ?>/img/achiev-1.png"></div>
+                    <div class="bg-image bg-image_bottom"><img src="<?php echo $tp ?>/images/achiev-1.png"></div>
                 </div>
                 <div class="flex-block flex-block_text flex-block_bottom">
                     <div class="flex-block__content">
@@ -78,7 +78,7 @@
         <div class="section__wrapper wrapper">
             <div class="flex-row flex-row_swap">
                 <div class="flex-block">
-                    <div class="bg-image bg-image_bottom"><img src="<?php echo $tp ?>/img/achiev-1.png"></div>
+                    <div class="bg-image bg-image_bottom"><img src="<?php echo $tp ?>/images/achiev-1.png"></div>
                 </div>
                 <div class="flex-block flex-block_text flex-block_bottom">
                     <div class="flex-block__content">

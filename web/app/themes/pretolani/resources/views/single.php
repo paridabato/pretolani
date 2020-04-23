@@ -16,7 +16,7 @@ global $mob;
               <div class="section-slide">
                 <div class="section-slide__wrapper wrapper"><h2 class="section-slide__text section-title sep-letters">
                     Projet<br>Particulier un</h2></div>
-                <img class="section-slide__image" src="<?php echo $tp; ?>/img/slide-demo.png"/>
+                <img class="section-slide__image" src="<?php echo $tp; ?>/images/slide-demo.png"/>
               </div>
             </div>
           <?php } ?>
@@ -58,7 +58,7 @@ global $mob;
     <div class="section__wrapper wrapper">
       <div class="flex-row flex-row_swap">
         <div class="flex-block">
-          <div class="bg-image bg-image_bottom"><img src="<?php echo $tp ?>/img/achiev-1.png"></div>
+          <div class="bg-image bg-image_bottom"><img src="<?php echo $tp ?>/images/achiev-1.png"></div>
         </div>
         <div class="flex-block flex-block_text flex-block_bottom">
           <div class="flex-block__content">

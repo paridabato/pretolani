@@ -27,7 +27,7 @@ global $mob;
     </div>
     <div class="fw-image-wrapper">
       <div class="fw-image fw-image_halfslide fw">
-        <img src="<?php echo $tp ?>/img/teams-demo.png">
+        <img src="<?php echo $tp ?>/images/teams-demo.png">
       </div>
     </div>
   </section>
@@ -46,7 +46,7 @@ global $mob;
         <div class="swiper-wrapper">
           <?php for ($i = 0; $i < 5; $i++) : ?>
             <div class="swiper-slide">
-              <div class="gallery-slide-alt"><img src="<?php echo $tp ?>/img/slide-demo-alt.png"/></div>
+              <div class="gallery-slide-alt"><img src="<?php echo $tp ?>/images/slide-demo-alt.png"/></div>
             </div>
           <?php endfor; ?>
         </div>
@@ -60,7 +60,7 @@ global $mob;
         <div class="flex-block">
           <div class="image-block">
             <div class="image-block__image"><img class="wow fadeInRight" data-wow-delay="1.5s"
-                                                 src="<?php echo $tp ?>/img/image-block-demo.png"></div>
+                                                 src="<?php echo $tp ?>/images/image-block-demo.png"></div>
             <div class="image-block__title sep-letters">Atelier</div>
             <div class="image-block__text sep-lines">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
               lacinia erat nec tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit lacinia erat nec tempus.
@@ -70,7 +70,7 @@ global $mob;
         </div>
         <div class="flex-block">
           <!--                     <div class="image-block">
-                        <div class="image-block__image"><img src="<?php echo $tp ?>/img/image-block-demo.png"></div>
+                        <div class="image-block__image"><img src="<?php echo $tp ?>/images/image-block-demo.png"></div>
                         <div class="image-block__title">Atelier</div>
                         <div class="image-block__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia erat nec tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit  lacinia erat nec tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                     </div> -->
@@ -84,7 +84,7 @@ global $mob;
       <div class="flex-row  demo-2">
         <div class="flex-block">
           <!--                     <div class="image-block">
-                        <div class="image-block__image"><img src="<?php echo $tp ?>/img/image-block-demo.png"></div>
+                        <div class="image-block__image"><img src="<?php echo $tp ?>/images/image-block-demo.png"></div>
                         <div class="image-block__title">Atelier</div>
                         <div class="image-block__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia erat nec tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit  lacinia erat nec tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                     </div> -->
@@ -92,7 +92,7 @@ global $mob;
         <div class="flex-block">
           <div class="image-block">
             <div class="image-block__image"><img class="wow fadeInLeft" data-wow-delay="1.5s"
-                                                 src="<?php echo $tp ?>/img/image-block-demo.png"></div>
+                                                 src="<?php echo $tp ?>/images/image-block-demo.png"></div>
             <div class="image-block__title sep-letters">Atelier</div>
             <div class="image-block__text sep-lines">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
               lacinia erat nec tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit lacinia erat nec tempus.
@@ -108,7 +108,7 @@ global $mob;
     <div class="section__wrapper wrapper">
       <div class="flex-row  demo-2">
         <div class="flex-block">
-          <div class="bg-image bg-image_bottom"><img src="<?php echo $tp ?>/img/hand_x2.png"></div>
+          <div class="bg-image bg-image_bottom"><img src="<?php echo $tp ?>/images/hand_x2.png"></div>
         </div>
         <div class="flex-block flex-block_text">
           <div class="flex-block__content">

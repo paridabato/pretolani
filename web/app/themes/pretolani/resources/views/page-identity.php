@@ -28,7 +28,7 @@ global $mob;
     </div>
     <div class="fw-image-wrapper">
       <div class="fw-image fw-image_halfslide fw">
-        <img src="<?php echo $tp ?>/img/identity-demo.png">
+        <img src="<?php echo $tp ?>/images/identity-demo.png">
       </div>
     </div>
   </section>
@@ -53,7 +53,7 @@ global $mob;
                   erat nec tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit lacinia erat nec tempus.
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit
                 </div>
-                <div class="gallery-slide__image"><img src="<?php echo $tp ?>/img/slide-demo.png"/></div>
+                <div class="gallery-slide__image"><img src="<?php echo $tp ?>/images/slide-demo.png"/></div>
               </div>
             </div>
           <?php endfor; ?>
@@ -66,7 +66,7 @@ global $mob;
     <div class="section__wrapper wrapper">
       <div class="flex-row flex-row_swap demo-2">
         <div class="flex-block">
-          <div class="bg-image bg-image_bottom"><img src="<?php echo $tp ?>/img/hand_x2.png"></div>
+          <div class="bg-image bg-image_bottom"><img src="<?php echo $tp ?>/images/hand_x2.png"></div>
         </div>
         <div class="flex-block flex-block_text">
           <div class="flex-block__content">

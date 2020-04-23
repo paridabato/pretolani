@@ -29,7 +29,7 @@ Template Name: Homepage
         </div>
         <div class="fw-image-wrapper">
             <div class="fw-image fw-image_halfslide fw">
-                <img src="<?php echo $tp ?>/img/pen.png">
+                <img src="<?php echo $tp ?>/images/pen.png">
             </div>
         </div>
     </section>
@@ -45,7 +45,7 @@ Template Name: Homepage
         <div class="section__wrapper wrapper">
             <div class="flex-row demo-2">
                 <div class="flex-block">
-                    <div class="bg-image bg-image_bottom"><img src="<?php echo $tp ?>/img/hand_x2.png"></div>
+                    <div class="bg-image bg-image_bottom"><img src="<?php echo $tp ?>/images/hand_x2.png"></div>
                 </div>
                 <div class="flex-block flex-block_text flex-block_bottom">
                     <div class="flex-block__content">
@@ -62,7 +62,7 @@ Template Name: Homepage
         <div class="section__wrapper wrapper">
             <div class="flex-row flex-row_swap demo-2">
                 <div class="flex-block">
-                    <div class="bg-image bg-image_bottom"><img src="<?php echo $tp ?>/img/chertezh.png"></div>
+                    <div class="bg-image bg-image_bottom"><img src="<?php echo $tp ?>/images/chertezh.png"></div>
                 </div>
                 <div class="flex-block flex-block_text flex-block_bottom">
                     <div class="flex-block__content">
