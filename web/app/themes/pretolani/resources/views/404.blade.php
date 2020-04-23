@@ -6,7 +6,7 @@
         <div class="logo-wrap">
           <div class="logo-wrap__block">
             <div class="logo-wrap__block-title">{{ __('Erreur 404', 'sage') }}</div>
-            <a class="logo-wrap__block-text title-link" href="@php echo home_url(); @endphp">{{ __('Retour au site', 'sage') }}</a>
+            <a class="logo-wrap__block-text title-link" href="{{ home_url() }}">{{ __('Retour au site', 'sage') }}</a>
           </div>
         </div>
       </div>
