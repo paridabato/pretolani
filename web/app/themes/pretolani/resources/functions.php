@@ -237,7 +237,8 @@ function catLink($cat_id) {
 }
 */
 
-function language_selector_flags() {
+function language_selector_flags()
+{
     $languages = icl_get_languages('skip_missing=0&orderby=code');
     $lc = 1;
     if (!empty($languages)) {
@@ -254,7 +255,8 @@ function language_selector_flags() {
     }
 }
 
-function gv($var) {
+function gv($var)
+{
     $gv = array();
     $gv['tp'] = get_template_directory_uri();
     $gv['imgp'] = get_template_directory_uri() . '/assets/images';
