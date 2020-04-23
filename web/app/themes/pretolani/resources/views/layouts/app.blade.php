@@ -12,7 +12,7 @@
     @endif
     @php do_action('get_footer') @endphp
     @include('partials.footer')
-{{--    @include('components.gdpr')--}}
+    @include('components.gdpr')
     @php wp_footer() @endphp
   </body>
 </html>
