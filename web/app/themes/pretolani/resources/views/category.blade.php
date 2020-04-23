@@ -1,27 +1,31 @@
 @extends('layouts.app')
 
 @php
+
     $tp = get_template_directory_uri() . '/assets/images';
+
 @endphp
 
 @section('content')
 <div class="onepage" id="main">
+
     @include('partials.loader')
+
     <section class="page-section section section_nav section-black">
         <div class="section__wrapper wrapper">
             <div class="achievements-nav">
-                <a class="achievements-nav__item achievements-nav__item_link achievements-nav__item_active title-link">{{ __('Particuliers', 'sage') }}</a>
+                <a class="achievements-nav__item achievements-nav__item_link achievements-nav__item_active title-link">Particuliers</a>
                 <span class="achievements-nav__item achievements-nav__item_sep"></span>
-                <a class="achievements-nav__item achievements-nav__item_link title-link" href="/category/achievements/professionals/">{{ __('Professionnel', 'sage') }}</a>
+                <a class="achievements-nav__item achievements-nav__item_link title-link" href="/category/achievements/professionals/">Professionnel</a>
             </div>
         </div>
     </section>
-    @while ( have_posts() ) : the_post();
+    @php while ( have_posts() ) : the_post(); @endphp
         <section class="page-section section">
             <div class="section__wrapper wrapper">
                 <div class="flex-row">
                     <div class="flex-block">
-                        <div class="bg-image bg-image_bottom"><img src="{{ get_the_post_thumbnail_url() }}"></div>
+                        <div class="bg-image bg-image_bottom"><img src="@php echo get_the_post_thumbnail_url() @endphp"></div>
                     </div>
                     <div class="flex-block flex-block_text flex-block_bottom">
                         <div class="flex-block__content">
@@ -35,7 +39,7 @@
                 </div>
                 </div>
         </section>
-    @endwhile
+    @php endwhile; @endphp
 
 
     <section class="page-section section">

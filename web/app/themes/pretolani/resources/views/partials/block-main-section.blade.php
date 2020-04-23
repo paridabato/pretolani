@@ -1,6 +1,6 @@
-@empty($mainblock)
+@if(empty($mainblock))
     	$mainblock = get_field('main_block', $post->ID)
-@endempty
+@endif
 
 <section class="page-section section section_creators">
     <div class="section__wrapper wrapper">
