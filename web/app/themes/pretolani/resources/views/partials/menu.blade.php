@@ -7,11 +7,11 @@
     <div class="menu__wrapper wrapper">
         <div class="menu__links">
             <div class="menu__block menu__block_images">
-                @php if(!empty($menu['images'])) : @endphp
-                    @php foreach($menu['images'] as $i) : @endphp
-                        <img src="@php echo $i; @endphp"/>
-                    @php endforeach; @endphp
-                @php endif; @endphp
+                @if(!empty($menu['images']))
+                    @foreach($menu['images'] as $i)
+                        <img src="{{ $i }}"/>
+                    @endforeach
+                @endif
             </div>
             <div class="menu__block menu__block_nav">
                 @php
@@ -27,20 +27,20 @@
         </div>
         <div class="menu__sub">
             <div class="menu__sub-block">
-                @php if(!empty($menu['links'])) : @endphp
-                    @php foreach($menu['links'] as $l) : @endphp
-                    <a href="@php echo $l['link']['url']; @endphp">@php echo $l['link']['title']; @endphp</a>
-                    @php endforeach; @endphp
-                @php endif; @endphp
+                @if(!empty($menu['links']))
+                    @foreach($menu['links'] as $l)
+                    <a href="{{ $l['link']['url'] }}">{{ $l['link']['title'] }}</a>
+                    @endforeach
+                @endif
             </div>
 
-            @php if(!empty($soc)) : @endphp
+            @if(!empty($soc))
                 <div class="menu__sub-block menu__sub-block_social menu-social">
-                    @php foreach($soc as $s) : @endphp
-                        <a class="menu-social__link" href="@php echo $s['link']['url'] @endphp" target="@php echo $s['link']['target'] @endphp">@php echo $s['link']['title'] @endphp</a>
-                    @php endforeach; @endphp
+                    @foreach($soc as $s)
+                        <a class="menu-social__link" href="{{ $s['link']['url'] }}" target="{{ $s['link']['target'] }}">{{ $s['link']['title'] }}</a>
+                    @endforeach
                 </div>
-            @php endif; @endphp
+            @endif
         </div>
     </div>
 </div>
