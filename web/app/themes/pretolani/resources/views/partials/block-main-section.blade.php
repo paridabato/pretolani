@@ -1,5 +1,5 @@
 @if(empty($mainblock))
-    	$mainblock = get_field('main_block', $post->ID)
+  @php $mainblock = get_field('main_block', $post->ID); @endphp
 @endif
 
 <section class="page-section section section_creators">
