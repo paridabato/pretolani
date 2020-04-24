@@ -1,34 +1,23 @@
-<?php
-/*
+{{--
 Template Name: Identity
-*/
-?>
+--}}
 
-<?php get_header(); ?>
-
-<?php
-
-global $tp;
-global $mob;
-
-?>
+@extends('layouts.app')
 
 <div class="onepage" id="main">
-
-  <?php get_template_part('partials/loader'); ?>
-
+ @include('partials.loader')
   <section class="page-section section section_creators">
     <div class="section__wrapper wrapper">
       <div class="flex-row flex-row_relative">
         <div class="flex-block title-wrap">
-          <h1 class="section-title sep-letters">Identite</h1>
+          <h1 class="section-title sep-letters">@include('partials.page-header')</h1>
           <div class="description sep-lines">Lorem ipsum dolor sit amet, consectetur<br>adipiscing elit.</div>
         </div>
       </div>
     </div>
     <div class="fw-image-wrapper">
       <div class="fw-image fw-image_halfslide fw">
-        <img src="<?php echo $tp ?>/images/identity-demo.png">
+        <img src="{!! gv('imgp') !!}/identity-demo.png">
       </div>
     </div>
   </section>
@@ -45,7 +34,7 @@ global $mob;
       </div>
       <div class="swiper-container gallery-slider">
         <div class="swiper-wrapper">
-          <?php for ($i = 0; $i < 5; $i++) : ?>
+          @for ($i = 0; $i < 5; $i++)
             <div class="swiper-slide">
               <div class="gallery-slide">
                 <div class="gallery-slide__title">Naissance</div>
@@ -53,10 +42,10 @@ global $mob;
                   erat nec tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit lacinia erat nec tempus.
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit
                 </div>
-                <div class="gallery-slide__image"><img src="<?php echo $tp ?>/images/slide-demo.png"/></div>
+                <div class="gallery-slide__image"><img src="{!! gv('imgp') !!}/slide-demo.png"/></div>
               </div>
             </div>
-          <?php endfor; ?>
+          @endfor
         </div>
       </div>
     </div>
@@ -66,7 +55,7 @@ global $mob;
     <div class="section__wrapper wrapper">
       <div class="flex-row flex-row_swap demo-2">
         <div class="flex-block">
-          <div class="bg-image bg-image_bottom"><img src="<?php echo $tp ?>/images/hand_x2.png"></div>
+          <div class="bg-image bg-image_bottom"><img src="{!! gv('imgp') !!}/hand_x2.png"></div>
         </div>
         <div class="flex-block flex-block_text">
           <div class="flex-block__content">
@@ -80,11 +69,3 @@ global $mob;
     </div>
   </section>
 </div>
-
-<style>
-  body {
-    overflow: hidden;
-  }
-</style>
-
-<?php get_footer(); ?>
