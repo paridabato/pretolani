@@ -237,6 +237,7 @@ function catLink($cat_id) {
 }
 */
 
+
 function language_selector_flags()
 {
     $languages = icl_get_languages('skip_missing=0&orderby=code');
