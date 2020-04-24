@@ -38,6 +38,9 @@ if (file_exists($root_dir . '/.env')) {
  * Default: production
  */
 define('WP_ENV', env('WP_ENV') ?: 'production');
+define('FS_CHMOD_DIR', env('FS_CHMOD_DIR') ?: false);
+
+
 
 /**
  * URLs
