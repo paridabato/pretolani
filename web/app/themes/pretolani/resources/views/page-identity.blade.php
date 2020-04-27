@@ -8,6 +8,7 @@ Template Name: Identity
 
 @extends('layouts.app')
 
+@section('content')
 <div class="onepage" id="main">
  @include('partials.loader')
  @include('partials.block-main-section')
@@ -41,3 +42,4 @@ Template Name: Identity
 
   @include('partials.block-pages')
 </div>
+@endsection
