@@ -9,7 +9,7 @@
     		<div class="title-link__text">{{ __('Demander un devis', 'sage') }}</div>
     		<div class="title-link__hint copy-trigger">
 	    		<div class="title-link__hint-inner">
-                    <div class="title-link__hint-text">{{ __('Copier l'adresse email', 'sage') }}</div>
+                    <div class="title-link__hint-text">{{ __('Copier l\'adresse email', 'sage') }}</div>
                     <input id="copytext" value="{{ $email }}"  placeholder="L'adresse email est bien copiée" />
 	    		</div>
     		</div>

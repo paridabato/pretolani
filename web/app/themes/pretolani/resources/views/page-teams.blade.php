@@ -5,23 +5,8 @@ Template Name: Teams
 @extends('layouts.app')
 @section('content')
   <div class="onepage" id="main">
-    @include('partials.loader')
-    <section class="page-section section section_creators">
-      <div class="section__wrapper wrapper">
-        <div class="flex-row flex-row_relative">
-          <div class="flex-block title-wrap">
-            <h1 class="section-title sep-letters">Equipes</h1>
-            <div class="description sep-lines">Lorem ipsum dolor sit amet, consectetur<br>adipiscing elit.</div>
-          </div>
-        </div>
-      </div>
-      <div class="fw-image-wrapper">
-        <div class="fw-image fw-image_halfslide fw">
-          <img src="{!! gv('imgp') !!}/teams-demo.png">
-        </div>
-      </div>
-    </section>
-
+    {{-- @include('partials.loader') --}}
+    @include('partials.block-main-section')
 
     <section class="page-section section">
       <div class="section__wrapper wrapper gallery-slider-wrap">
@@ -34,7 +19,7 @@ Template Name: Teams
         </div>
         <div class="swiper-container gallery-slider-alt">
           <div class="swiper-wrapper">
-            @for ($i = 0; $i < 5; $i++) : ?>
+            @for ($i = 0; $i < 5; $i++)
               <div class="swiper-slide">
                 <div class="gallery-slide-alt"><img src="{!! gv('imgp') !!}/slide-demo-alt.png"/></div>
               </div>
