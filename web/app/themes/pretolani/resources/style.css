@@ -28,6 +28,12 @@ iframe {
     max-width: 100%;
 }
 
+#copytext {
+    position: absolute;
+    left: -99999px;
+    opacity: 0;
+}
+
 .fw {
     width: 100%;
     min-width: 100%;
@@ -250,7 +256,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
     visibility: visible;
 }
 
-.animated .sep-lines::before {
+.animated .sep-lines:not(.quote-text)::before {
     top: 100%;
 }
 

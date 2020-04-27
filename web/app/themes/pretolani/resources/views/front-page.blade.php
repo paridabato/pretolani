@@ -5,12 +5,6 @@
         @include('partials.loader')
         @include('partials.block-main-section')
         @include('partials.text-single')
-        @include('partials.block-imageblock')
+        @include('partials.block-pages')
     </div>
-
-    <style>
-        body {
-            overflow: hidden;
-        }
-    </style>
 @endsection

@@ -1,48 +1,5 @@
 $(document).ready(function() {
 
-    /* SEP LETTERS START */
-/*    var $div = $('.sep-letters').clone().html('');
-    $('.sep-letters').contents().each(function(){
-      var spanClass = '';
-
-      if ($(this).is('span')) {
-        spanClass = $(this).attr('class');
-      }
-
-      $textArray = $(this).text().split('');
-
-      for (var i = 0; i < $textArray.length; i++) {
-        if($textArray[i] == ' ') {
-            $('<span style="transition-delay: '+(1+i*0.15)+'s">').text($textArray[i]).addClass('empty-space').appendTo($div);
-        } else {
-            $('<span style="transition-delay: '+(1+i*0.15)+'s">').text($textArray[i]).appendTo($div);
-        }
-      }
-
-    });
-
-    $('.sep-letters').replaceWith($div);*/
-    /* SEP LETTERS END */
-
-    /* SEP LINE START */
-
-/*    var tl = gsap.timeline(), 
-        mySplitText = new SplitText(".quote-text", {type:"words,chars, lines"}), 
-        chars = mySplitText.chars; //an array of all the divs that wrap each character
-
-    gsap.set(".quote-text", {perspective: 0});*/
-
-
-    //gsap.fromTo(split.lines, {opacity: 0, y: 500, transformOrigin:"0% 50% -50",  ease:"back"}, {opacity: 1, y: 0, duration: 5});
-
-
-
-/*    document.getElementById("animate").onclick = function() {
-      tl.restart();
-    }*/
-
-    /* SEP LINE END */
-
     /* WOW START */
 
     wow = new WOW(
@@ -219,4 +176,15 @@ $(document).ready(function() {
         spaceBetween: 25,
         speed: 1500
     });
+    $(document).on('click', '.copy-trigger', function(){
+        copyText();
+    });
 });
+
+function copyText() {
+  var copyText = document.getElementById("copytext");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+  document.execCommand("copy");
+  alert(copyText.placeholder);
+} 

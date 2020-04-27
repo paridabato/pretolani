@@ -11,7 +11,7 @@ Template Name: Contacts
             <div class="section__wrapper wrapper">
                 <div class="flex-row">
                     <div class="flex-block title-wrap title-wrap_top">
-                        <h1 class="section-title sep-letters">@include('partials.page-header')</h1>
+                        <h1 class="section-title sep-letters">{!! App::title() !!}</h1>
                         <div class="description sep-lines">{{ the_content() }}</div>
                     </div>
                     <div class="flex-block flex-block_padd"><div class="flex-block__content">@include('partials.social')</div></div>
