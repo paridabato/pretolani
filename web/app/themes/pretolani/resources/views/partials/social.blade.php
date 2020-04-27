@@ -7,9 +7,10 @@
 	@if(!empty($email))
     	<div class="social-block__title-link title-link  wow fadeInLeft" data-wow-delay="1s">
     		<div class="title-link__text">{{ __('Demander un devis', 'sage') }}</div>
-    		<div class="title-link__hint">
+    		<div class="title-link__hint copy-trigger">
 	    		<div class="title-link__hint-inner">
-	    			<a charset="title-link__hint-item" href="mailto:{{ $email }}">{{ $email }}</a>
+                    <div class="title-link__hint-text">{{ __('Copier l'adresse email', 'sage') }}</div>
+                    <input id="copytext" value="{{ $email }}"  placeholder="L'adresse email est bien copiée" />
 	    		</div>
     		</div>
     	</div>

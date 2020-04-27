@@ -9,6 +9,9 @@
             	@if(!empty($mainblock['title']))
                 	<h1 class="section-title sep-letters">{!! $mainblock['title'] !!}</h1>
                 @endif
+                @if(!empty($mainblock['subtitle']))
+                    <div class="description sep-lines">{!! $mainblock['subtitle'] !!}</div>
+                @endif
             </div>
             <div class="flex-block flex-block_padd">
                 <div class="flex-block__content">

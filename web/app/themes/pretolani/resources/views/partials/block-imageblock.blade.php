@@ -1,6 +1,6 @@
-@if(empty($imageblocks))
+@empty($imageblocks)
 	@php $imageblocks = get_field('image_blocks', $post->ID) @endphp
-@endif
+@endempty
 
 @if(!empty($imageblocks['block']))
 	@foreach($imageblocks['block'] as $block)
