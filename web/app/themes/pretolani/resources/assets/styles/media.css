@@ -257,7 +257,7 @@
     .home section:nth-child(5) .flex-row_swap {
         flex-direction: column-reverse;
         align-items: flex-end;
-        width: fit-content;
+        width: max-content;
         margin: 0 0 0 auto;
     }
 

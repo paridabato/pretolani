@@ -9,21 +9,29 @@
 @section('content')
 <div class="onepage" id="main">
 
-    @include('partials.loader')
+    {{--
+    @include('partials.loader')--}}
 
     <section class="page-section section section_nav section-black">
         <div class="section__wrapper wrapper">
-            <div class="achievements-nav">
-                <a class="achievements-nav__item achievements-nav__item_link achievements-nav__item_active title-link">Particuliers</a>
-                <span class="achievements-nav__item achievements-nav__item_sep"></span>
-                <a class="achievements-nav__item achievements-nav__item_link title-link" href="/category/achievements/professionals/">Professionnel</a>
-            </div>
+            {{--<div class="subcats-nav">
+                <a class="subcats-nav__item subcats-nav__item_link subcats-nav__item_active title-link">Particuliers</a>
+                <span class="subcats-nav__item subcats-nav__item_sep"></span>
+                <a class="subcats-nav__item subcats-nav__item_link title-link" href="/category/subcats/professionals/">Professionnel</a>
+            </div> --}}
+            @php
+                
+                cat_nav();
+            @endphp
         </div>
-    </section>
-    @php while ( have_posts() ) : the_post(); @endphp
+    </section> 
+
+    @php $it = 1 @endphp
+    @while(have_posts()) 
+        @php the_post(); @endphp
         <section class="page-section section">
             <div class="section__wrapper wrapper">
-                <div class="flex-row">
+                <div class="flex-row {{ ($it % 2 == 1) ? '' : 'flex-row_swap' }}">
                     <div class="flex-block">
                         <div class="bg-image bg-image_bottom"><img src="@php echo get_the_post_thumbnail_url() @endphp"></div>
                     </div>
@@ -39,7 +47,8 @@
                 </div>
                 </div>
         </section>
-    @php endwhile; @endphp
+        @php $it++ @endphp
+    @endwhile
 
 
     <section class="page-section section">
@@ -51,11 +60,5 @@
         </div>
     </section>
 </div>
-
-<style>
-    body {
-        overflow: hidden;
-    }
-</style>
 
 @endsection

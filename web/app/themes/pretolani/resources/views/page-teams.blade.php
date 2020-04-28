@@ -8,7 +8,7 @@ Template Name: Teams
 @extends('layouts.app')
 @section('content')
     <div class="onepage" id="main">
-        {{-- @include('partials.loader')
+        @include('partials.loader')
         @include('partials.block-main-section')
 
         @if(!empty($gallery))
@@ -63,24 +63,6 @@ Template Name: Teams
             @endforeach
         @endif
 
- --}}
         @include('partials.block-pages')
-        <section class="page-section section section-black">
-            <div class="section__wrapper wrapper">
-                <div class="flex-row  demo-2">
-                    <div class="flex-block">
-                        <div class="bg-image bg-image_bottom"><img src="{!! gv('imgp') !!}/hand_x2.png"></div>
-                    </div>
-                    <div class="flex-block flex-block_text">
-                        <div class="flex-block__content">
-                            <div class="title-block c-white">
-                                <div class="section-title sep-letters">Realisation</div>
-                                <a class="title-link wow fadeInLeft" data-wow-delay="1s">Découvrir</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </div>
 @endsection
