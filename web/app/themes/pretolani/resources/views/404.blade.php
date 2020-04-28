@@ -13,9 +13,6 @@
     </section>
   </div>
   <style>
-    body {
-      overflow: hidden;
-    }
     .header,
     #fp-nav {
       display: none;

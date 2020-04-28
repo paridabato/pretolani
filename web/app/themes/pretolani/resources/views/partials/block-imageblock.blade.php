@@ -1,6 +1,6 @@
-@if(empty($imageblocks))
+@empty($imageblocks)
 	@php $imageblocks = get_field('image_blocks', $post->ID) @endphp
-@endif
+@endempty
 
 @if(!empty($imageblocks['block']))
 	@foreach($imageblocks['block'] as $block)
@@ -15,7 +15,7 @@
 		            <div class="flex-block flex-block_text">
 		                <div class="flex-block__content">
 		                    <div class="title-block">
-		                    	@if(!empty($block['image']))
+		                    	@if(!empty($block['title']))
 		                        	<div class="section-title sep-letters">{{ $block['title'] }}</div>
 		                        @endif
 
