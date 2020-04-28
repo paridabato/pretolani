@@ -7,10 +7,4 @@
         @include('partials.text-single')
         @include('partials.block-imageblock')
     </div>
-
-    <style>
-        body {
-            overflow: hidden;
-        }
-    </style>
 @endsection
