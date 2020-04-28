@@ -21,6 +21,33 @@
         height: auto;
         box-sizing: border-box;
     }
+    /* PRELOADER */
+    .section_logo {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .section_logo .wrapper{
+        height: 100%;
+    }
+
+    .section_logo .wrapper .logo-wrap__block::before, 
+    .section_logo .wrapper .logo-wrap__block::after {
+        display: none;
+    }
+
+    .section_logo .wrapper .logo-wrap__block-dash {
+        height: 5.2rem;
+        margin: 2.6rem auto 3rem;
+    }
+
+    .section_logo .wrapper .logo-wrap__block-text_small {
+        color: #1b1515;
+    }
 
     /* HEADR */
     .header {
@@ -105,9 +132,6 @@
     }
 
     /* MAIN PAGE */
-    .section_logo {
-        display: none;
-    }
 
     .home .section_creators {
         padding-top: 8rem;
@@ -239,6 +263,104 @@
 
     .home section:nth-child(5) > div > div > div.flex-block.flex-block_text > div {
         padding-left: 0;
+    }
+
+    /* 404 */
+    .error404 .section .wrapper {
+        height: 100vh;
+    }
+
+    .error404 .logo-wrap__block::before,
+    .error404 .logo-wrap__block::after {
+        display: none;
+    }
+
+    .error404 .logo-wrap__block-title {
+        line-height: 1;
+    }
+
+    .error404 .title-link {
+        margin-top: 1.8rem;
+    }
+
+    .error404 .title-link::after {
+        display: none;
+    }
+
+    /* CONTACTS */
+    .page-contacts .header {
+        background-color: #000;
+    }
+
+    .page-contacts #main {
+        min-height: 100vh;
+    }
+
+    .page-contacts .section-black {
+        min-height: 100vh;
+    }
+
+    .page-contacts .section-black .wrapper {
+        padding-top: 21vh;
+    }
+
+    .page-contacts .section-black .section-title {
+        padding-top: 0;
+        text-align: center;
+        margin-bottom: 16.5vh;
+    }
+
+    .page-contacts .section-black .description {
+        max-width: 100%;
+        margin-bottom: 8vh;
+        font-size: 1.2rem;
+    }
+
+    .page-contacts .section-black .description  p {
+        display: block;
+        text-align: center;
+    }
+
+    .page-contacts .social-block {
+        padding-left: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .page-contacts .social-block .title-link,
+    .page-contacts .social-block .social-block__block{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+     .page-contacts .social-block .title-link {
+        margin-bottom: 7.5vh;
+    }
+
+    .page-contacts .social-block .social-block__block {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .page-contacts .social-block .social-block__block .social-link {
+        width: auto;
+        margin-bottom: 2.4rem;
+    }
+
+     .page-contacts .social-block .title-link {
+        margin-bottom: 7.5vh;
+    }
+
+    .page-contacts .social-block .social-block__block {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .page-contacts .title-link__hint,
+    .page-contacts .title-link::after {
+        display: none;
     }
 }
 
