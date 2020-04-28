@@ -9,7 +9,7 @@
 		        <div class="flex-row @if($block['swap_position']) flex-row_swap @endif">
 		            <div class="flex-block">
 		            	@if(!empty($block['image']))
-		                	<div class="bg-image"><img src="{{ $block['image'] }}"></div>
+		                	<div class="bg-image"><img src="{{ $block['image'] }}" alt=""></div>
 		                @endif
 		            </div>
 		            <div class="flex-block flex-block_text">
@@ -18,7 +18,6 @@
 		                    	@if(!empty($block['title']))
 		                        	<div class="section-title sep-letters">{{ $block['title'] }}</div>
 		                        @endif
-
 		                        @if(!empty($block['image']))
 		                        	<a class="title-link wow fadeInLeft" data-wow-delay="1s" href="{{ $block['link']['url'] }}">{{ $block['link']['title'] }}</a>
 		                        @endif
