@@ -268,10 +268,11 @@ add_filter('deprecated_hook_trigger_error', function () {
     return false;
 });
 
-function cat_nav() {
+function cat_nav()
+{
     $cat = get_queried_object();
     $p = false;
-    if($cat->parent == 0) {
+    if ($cat->parent == 0) {
         $id = $cat->term_id;
         $args = array('child_of' => $id);
     } else {
@@ -279,16 +280,16 @@ function cat_nav() {
         $args = array('parent' => $id);
         $p = true;
     }
-    $categories = get_categories( $args );
+    $categories = get_categories($args);
 
     $it = 1;
     $total_cat = count($categories);
 
     $html = '<div class="subcats-nav">';
     $active = '';
-    foreach($categories as $category) { 
-        if($p) {
-            if($category->term_id == $cat->term_id) {
+    foreach ($categories as $category) {
+        if ($p) {
+            if ($category->term_id == $cat->term_id) {
                 $active = 'subcats-nav__item_active';
             } else {
                 $active = '';
@@ -297,8 +298,8 @@ function cat_nav() {
             $active = ($it == 1 ? 'subcats-nav__item_active' : '');
         }
         //$html .= '<a class="subcats-nav__item subcats-nav__item_link subcats-nav__item_active title-link" href="'.get_category_link( $category->term_id ).'">'.$category->name .'</a>';
-        $html .= '<a class="subcats-nav__item subcats-nav__item_link '. $active .' title-link" href="'.get_category_link( $category->term_id ).'">'.$category->name .'</a>';
-        if($it < $total_cat) {
+        $html .= '<a class="subcats-nav__item subcats-nav__item_link '. $active .' title-link" href="' . get_category_link($category->term_id) .'">'. $category->name .'</a>';
+        if ($it < $total_cat) {
             $html .= '<span class="subcats-nav__item subcats-nav__item_sep"></span>';
             $it++;
         }
