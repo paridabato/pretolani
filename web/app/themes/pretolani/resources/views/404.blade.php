@@ -12,10 +12,4 @@
       </div>
     </section>
   </div>
-  <style>
-    .header,
-    #fp-nav {
-      display: none;
-    }
-  </style>
 @endsection
