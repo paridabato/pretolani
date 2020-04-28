@@ -827,19 +827,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 /* menu END */
 
 
-/* Achievements START */
+/* subcats START */
 
-.achievements-nav {
+.subcats-nav {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.achievements-nav__item {
+.subcats-nav__item {
     margin: 0 5rem;
 }
 
-.achievements-nav__item_link {
+.subcats-nav__item_link {
     display: flex;
     align-items: center;
     backface-visibility: hidden;
@@ -851,36 +851,36 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
     cursor: pointer;
 }
 
-.achievements-nav__item_link::before {
+.subcats-nav__item_link::before {
     margin-right: 2.5rem;
     opacity: 0;
 }
 
-.achievements-nav__item_link::after {
+.subcats-nav__item_link::after {
     margin-left: 2.5rem;
 }
 
 
-.achievements-nav__item_active {
+.subcats-nav__item_active {
     cursor: default;
 }
-.achievements-nav__item_active,
-.achievements-nav__item_active::before {
+.subcats-nav__item_active,
+.subcats-nav__item_active::before {
     opacity: 1;
 }
 
-.achievements-nav__item_active:hover::after {
+.subcats-nav__item_active:hover::after {
     opacity: 0;
 }
 
-.achievements-nav__item_sep {
+.subcats-nav__item_sep {
     display: block;
     width: 0;
     height: 3rem;
     border: solid 1.5px #fff;
 }
 
-/* Achievements END */
+/* subcats END */
 
 /* slider START */
 
