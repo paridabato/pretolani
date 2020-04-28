@@ -20,20 +20,20 @@
                 <a class="subcats-nav__item subcats-nav__item_link title-link" href="/category/subcats/professionals/">Professionnel</a>
             </div> --}}
             @php
-                
+
                 cat_nav();
             @endphp
         </div>
-    </section> 
+    </section>
 
     @php $it = 1 @endphp
-    @while(have_posts()) 
+    @while(have_posts())
         @php the_post(); @endphp
         <section class="page-section section">
             <div class="section__wrapper wrapper">
                 <div class="flex-row {{ ($it % 2 == 1) ? '' : 'flex-row_swap' }}">
                     <div class="flex-block">
-                        <div class="bg-image bg-image_bottom"><img src="@php echo get_the_post_thumbnail_url() @endphp"></div>
+                        <div class="bg-image bg-image_bottom"><img src="@php echo get_the_post_thumbnail_url() @endphp " alt=""></div>
                     </div>
                     <div class="flex-block flex-block_text flex-block_bottom">
                         <div class="flex-block__content">
