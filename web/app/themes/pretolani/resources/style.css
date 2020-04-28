@@ -71,6 +71,7 @@ iframe {
 }
 
 .square-icon {
+    flex: 0 0 auto;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -489,6 +490,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
     left: 50%;
 }
 
+.single .title-link__hint-inner {
+    color: #fff;
+    background: #000;
+}
 
 .section-date {
     font-size: 1.4rem;
@@ -1076,3 +1081,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 }
 
 /* image block END */
+
+
+.error404 .header,
+.error404 #fp-nav {
+    display: none;
+}
