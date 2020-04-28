@@ -25,6 +25,7 @@
             </div>
             <div class="menu__block"></div>
         </div>
+        <div class="mobile-langs">{{ language_selector_flags() }}</div>
         <div class="menu__sub">
             <div class="menu__sub-block">
                 @if(!empty($menu['links']))

@@ -16,9 +16,3 @@
     @php wp_footer() @endphp
   </body>
 </html>
-
-<style>
-    body {
-        overflow: hidden;
-    }
-</style>
