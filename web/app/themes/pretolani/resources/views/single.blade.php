@@ -64,7 +64,7 @@
 	                        <div class="title-block c-white">
 	                            <div class="section-date wow fadeInUp" data-wow-delay="0.5s">{{ get_the_date('Y', $p->ID) }}</div>
 	                            <div class="section-title sep-letters">{{ $p->post_title }}</div>
-	                            <a class="title-link wow fadeInLeft" data-wow-delay="1s" href="{{ get_permalink($p->ID) }}">Découvrir</a>
+	                            <a class="title-link wow fadeInLeft" data-wow-delay="1s" href="{{ get_permalink($p->ID) }}">{{ __('Découvrir', 'sage') }}</a>
 	                        </div>
 	                    </div>
 	                </div>

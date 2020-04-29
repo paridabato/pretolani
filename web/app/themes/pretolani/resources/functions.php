@@ -145,22 +145,22 @@ add_filter('wpcf7_autop_or_not', '__return_false');
 function load_js_css()
 {
     wp_enqueue_style('fonts', get_template_directory_uri() . '/assets/fonts/stylesheet.css');
-    // wp_enqueue_style('animate', get_template_directory_uri() . '/assets/styles/animate.css');
-    // wp_enqueue_style('fullpage', get_template_directory_uri() . '/assets/styles/fullpage.min.css');
-    // wp_enqueue_style('swiper', get_template_directory_uri() . '/assets/styles/swiper.min.css');
+    wp_enqueue_style('animate', get_template_directory_uri() . '/assets/styles/animate.css');
+    wp_enqueue_style('fullpage', get_template_directory_uri() . '/assets/styles/fullpage.min.css');
+    wp_enqueue_style('swiper', get_template_directory_uri() . '/assets/styles/swiper.min.css');
 
     wp_enqueue_style('styles', get_stylesheet_uri());
     wp_enqueue_style('media-styles', get_template_directory_uri() . '/assets/styles/media.css');
 
 
-    // wp_enqueue_script('jquery-js', get_template_directory_uri() . '/assets/scripts/jquery-1.11.1.min.js', array(), null, false);
+    wp_enqueue_script('jquery-js', get_template_directory_uri() . '/assets/scripts/jquery-1.11.1.min.js', array(), null, false);
     // wp_localize_script('jquery-js', 'ajaxurl', admin_url( 'admin-ajax.php' ) );
 
     wp_enqueue_script('gsap', get_template_directory_uri() . '/assets/scripts/gsap-latest-beta.min.js', array('jquery'), null, false);
     wp_enqueue_script('splittext', get_template_directory_uri() . '/assets/scripts/SplitText3.min.js', array('jquery'), null, false);
-    // wp_enqueue_script('fullpage', get_template_directory_uri() . '/assets/scripts/fullpage.js', array('jquery'), null, false);
-    // wp_enqueue_script('wow', get_template_directory_uri() . '/assets/scripts/wow.js', array('jquery'), null, false);
-    // wp_enqueue_script('swiper', get_template_directory_uri() . '/assets/scripts/swiper.min.js', array('jquery'), null, false);
+    wp_enqueue_script('fullpage', get_template_directory_uri() . '/assets/scripts/fullpage.js', array('jquery'), null, false);
+    wp_enqueue_script('wow', get_template_directory_uri() . '/assets/scripts/wow.js', array('jquery'), null, false);
+    wp_enqueue_script('swiper', get_template_directory_uri() . '/assets/scripts/swiper.min.js', array('jquery'), null, false);
     wp_enqueue_script('script', get_template_directory_uri() . '/assets/scripts/script.js', array('jquery'), null, false);
 }
 
