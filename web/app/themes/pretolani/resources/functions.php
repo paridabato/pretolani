@@ -154,7 +154,7 @@ function load_js_css()
 
 
     // wp_enqueue_script('jquery-js', get_template_directory_uri() . '/assets/scripts/jquery-1.11.1.min.js', array(), null, false);
-    wp_localize_script('jquery-js', 'ajaxurl', admin_url( 'admin-ajax.php' ) );
+    wp_localize_script('jquery-js', 'ajaxurl', admin_url('admin-ajax.php'));
 
     wp_enqueue_script('gsap', get_template_directory_uri() . '/assets/scripts/gsap-latest-beta.min.js', array('jquery'), null, false);
     wp_enqueue_script('splittext', get_template_directory_uri() . '/assets/scripts/SplitText3.min.js', array('jquery'), null, false);
