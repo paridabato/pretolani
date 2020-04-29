@@ -6,6 +6,7 @@ web/app/mu-plugins/*/
 !web/app/mu-plugins/148-ecotools/
 web/app/upgrade
 web/app/uploads/*
+web/app/languages/wpml/*
 !web/app/uploads/.gitkeep
 !web/app/plugins/wp-graphql-acf
 

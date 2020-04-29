@@ -1,14 +1,5 @@
 $(document).ready(function () {
     if ($(window).width() > 1023) {
-        /* SEP LETTERS START */
-        /*    var $div = $('.sep-letters').clone().html('');
-            $('.sep-letters').contents().each(function(){
-            var spanClass = '';
-
-            if ($(this).is('span')) {
-                spanClass = $(this).attr('class');
-            }
-
         /* WOW START */
 
         wow = new WOW(
@@ -23,8 +14,6 @@ $(document).ready(function () {
         wow.init();
             
         /* WOW END */
-
-
 
         var quotes = [];
         var lines = [];
@@ -179,21 +168,6 @@ $(document).ready(function () {
             speed: 2500
         });
 
-        var gallery_slider = new Swiper('.gallery-slider', {
-            loop: true,
-            navigation: {
-                nextEl: '.gallery-slider-nav__arrow-next',
-                prevEl: '.gallery-slider-nav__arrow-prev',
-            },
-            pagination: {
-                el: '.gallery-slider-nav__scrollbar',
-                type: 'progressbar',
-            },
-            slidesPerView: 'auto',
-            spaceBetween: 130,
-            speed: 1500
-        });
-
         var gallery_slider_alt = new Swiper('.gallery-slider-alt', {
             loop: true,
             navigation: {
@@ -245,4 +219,36 @@ $(document).ready(function () {
         }, function(){
             $(document).find('.menu__block_images img').removeClass('active');
         });
+    
+        var gallery_slider = new Swiper('.gallery-slider', {
+                loop: true,
+                navigation: {
+                    nextEl: '.gallery-slider-nav__arrow-next',
+                    prevEl: '.gallery-slider-nav__arrow-prev',
+                },
+                pagination: {
+                    el: '.gallery-slider-nav__scrollbar',
+                    type: 'progressbar',
+                },
+                slidesPerView: 'auto',
+            speed: 1500,
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 35
+                },
+                375: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 35
+                },
+                414: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 63
+                },
+                1024: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 130
+                }
+            }
+            });
 });

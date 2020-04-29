@@ -1,4 +1,4 @@
-@php 
+@php
     $soc = get_field('socials', 'options');
     $menu = get_field('menu', 'options');
 @endphp
@@ -9,7 +9,7 @@
             <div class="menu__block menu__block_images">
                 @if(!empty($menu['images']))
                     @foreach($menu['images'] as $i)
-                        <img src="{{ $i }}"/>
+                        <img src="{{ $i }}" alt=""/>
                     @endforeach
                 @endif
             </div>
@@ -27,7 +27,7 @@
         </div>
         <div class="mobile-langs">{{ language_selector_flags() }}</div>
         <div class="menu__sub">
-            <div class="menu__sub-block">
+            <div class="menu__sub-block" role="navigation">
                 @if(!empty($menu['links']))
                     @foreach($menu['links'] as $l)
                     <a href="{{ $l['link']['url'] }}">{{ $l['link']['title'] }}</a>
