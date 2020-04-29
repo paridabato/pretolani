@@ -15,7 +15,7 @@
 		<section class="page-section section section-{{ $p['background'] }}">
 		    <div class="section__wrapper">
 		        <div class="flex-row @if($p['swap_position']) flex-row_swap @endif">
-		            <div class="flex-block">
+		            <div class="flex-block flex-block_pb">
 		                <div class="bg-image">
 		                	@if($p['is_category'])
                     			<img src="{{ $thumb }}" alt="">
@@ -27,7 +27,7 @@
 		            <div class="flex-block flex-block_text">
 		                <div class="flex-block__content">
 		                    <div class="title-block">
-	                        	<div class="section-title">
+	                        	<div class="section-title sep-letters">
 	                        		@if($p['is_category'])
 	                        			{{ $page->name }}
 	                        		@else

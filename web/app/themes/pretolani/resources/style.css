@@ -28,6 +28,23 @@ iframe {
     max-width: 100%;
 }
 
+.opacity-0 {
+    opacity: 0;
+}
+
+.fp-section.fp-table, .fp-slide.fp-table {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.fp-tableCell {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
 #copytext {
     position: absolute;
     left: -99999px;
@@ -52,6 +69,10 @@ iframe {
 
 .t-normal {
     text-transform: initial;
+}
+
+.author-name {
+    padding-top: 1rem;
 }
 
 .description h2,
@@ -157,8 +178,10 @@ iframe {
 }
 
 .section__wrapper {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+/*    padding-top: 3rem;
+    padding-bottom: 3rem;*/
+    max-height: 100%;
+    box-sizing: border-box;
 }
 
 .section-black {
@@ -176,6 +199,7 @@ iframe {
 
 .flex-row {
     display: flex;
+    max-height: 100%;
 }
 
 .flex-block {
@@ -197,7 +221,11 @@ iframe {
 
 .flex-block_text .flex-block__content {
     box-sizing: border-box;
-    padding: 0 13rem;
+    padding: 0 20rem;
+}
+
+.flex-block_pb {
+    padding-bottom: 4rem;
 }
 
 .flex-row_swap .flex-block:first-child {
@@ -228,13 +256,15 @@ iframe {
 }
 
 .sep-letters,
-.sep-lines {
+.sep-lines,
+.sep-lines-delay {
     visibility: hidden;
     overflow: hidden;
     position: relative;
 }
 
-.sep-lines::before {
+.sep-lines::before,
+.sep-lines-delay::before {
     content: '';
     width: 100%;
     height: 1000px;
@@ -253,11 +283,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 }
 
 .animated .sep-letters,
-.animated .sep-lines {
+.animated .sep-lines,
+.animated .sep-lines-delay {
     visibility: visible;
 }
 
-.animated .sep-lines:not(.quote-text)::before {
+.home .animated .sep-lines:not(.quote-text)::before {
     top: 100%;
 }
 
@@ -321,6 +352,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
     position: relative;
     overflow: hidden;
     backface-visibility: hidden;
+    max-height: 100%;
 }
 
 .bg-image::before {
@@ -766,15 +798,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 
 .menu__block_images img {
     position: absolute;
-    top: 0;
+    top: 100%;
     left: 0;
     opacity: 0;
-    transform: translateY(50%);
+    transform: translateY(-50%);
     transition: all 0.6s;
 }
 
 .menu__block_images img.active {
-    transform: translateY(0);
+    top: 50%;
     opacity: 1;
 }
 
@@ -1029,7 +1061,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
     line-height: 1.2;
     letter-spacing: 0.15rem;
     text-align: left;
-    margin-bottom: 3.5rem;
+    margin-bottom: 2.5rem;
 }
 
 .gallery-slide__text {
@@ -1050,8 +1082,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 /* image block START */
 
 .image-block {
+    display: flex;
+    flex-direction: column;
     transform: translateY(0);
     transition: all 1s ease-in-out;
+    height: 100%;
 }
 
 .image-block.active {
@@ -1060,7 +1095,25 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 }
 
 .image-block__image {
-    margin-bottom: 9rem;
+    overflow: hidden;
+}
+
+.image-block__image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+}
+
+.image-block__space {
+    height: 9rem;
+    flex: 0 0 auto;
+    /*flex: 0 0 auto;*/
+}
+
+.image-block__description {
+    flex: 0 0 auto;
+    padding-bottom: 1rem;
 }
 
 .image-block__title {

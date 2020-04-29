@@ -1,23 +1,21 @@
-@php 
-	if(empty($text_single)) {
-    	$text_single = get_field('text_single', $post->ID);
-	}
-@endphp
+@empty($text_single)
+    @php $text_single = get_field('text_single', $post->ID); @endphp
+@endempty
 
-@php if(!empty($text_single['text']) || !empty($text_single['author'])) : @endphp
-<section class="page-section section">
-    <div class="section__wrapper wrapper">
-        <div class="t-center description">
+@if(!empty($text_single['text']) || !empty($text_single['author']))
+    <section class="page-section section">
+        <div class="section__wrapper wrapper">
+            <div class="t-center description">
 
-        	@php if(!empty($text_single['text'])) : @endphp
-            	<h2 class="sep-lines t-normal title">@php echo $text_single['text'] @endphp</h2>
-            @php endif; @endphp
+            	@if(!empty($text_single['text']))
+                	<h2 class="sep-lines t-normal title">{!! $text_single['text'] !!}</h2>
+                @endif
 
-            @php if(!empty($text_single['author']) ) : @endphp
-            	<p class="sep-lines">@php echo $text_single['author'] @endphp</p>
-            @php endif; @endphp
+                @if(!empty($text_single['author']))
+                	<p class="sep-lines author-name">{!! $text_single['author'] !!}</p>
+                @endif
 
+            </div>
         </div>
-    </div>
-</section>
-@php endif; @endphp
+    </section>
+@endif

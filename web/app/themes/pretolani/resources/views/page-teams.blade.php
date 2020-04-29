@@ -47,13 +47,19 @@ Template Name: Teams
                                         </div>
                                     @endif
 
-                                    @if(!empty($block['title']))
-                                        <div class="image-block__title sep-letters">{{ $block['title'] }}</div>
-                                    @endif
+                                    <div class="image-block__space"></div>
 
-                                    @if(!empty($block['text']))
-                                        <div class="image-block__text sep-lines">{!! $block['text'] !!}</div>
-                                    @endif
+                                    <div class="image-block__description">
+
+                                        @if(!empty($block['title']))
+                                            <div class="image-block__title sep-letters">{{ $block['title'] }}</div>
+                                        @endif
+
+                                        @if(!empty($block['text']))
+                                            <div class="image-block__text sep-lines">{!! $block['text'] !!}</div>
+                                        @endif
+
+                                    </div>
                                 </div>
                             </div>
                             <div class="flex-block"></div>
