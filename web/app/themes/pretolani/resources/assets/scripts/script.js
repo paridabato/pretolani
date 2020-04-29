@@ -16,8 +16,6 @@ jQuery(document).ready(function ($) {
             
         /* WOW END */
 
-
-
         var quotes = [];
         var lines = [];
         var lines_d = [];
@@ -177,21 +175,6 @@ jQuery(document).ready(function ($) {
             speed: 2500
         });
 
-        var gallery_slider = new Swiper('.gallery-slider', {
-            loop: true,
-            navigation: {
-                nextEl: '.gallery-slider-nav__arrow-next',
-                prevEl: '.gallery-slider-nav__arrow-prev',
-            },
-            pagination: {
-                el: '.gallery-slider-nav__scrollbar',
-                type: 'progressbar',
-            },
-            slidesPerView: 'auto',
-            spaceBetween: 130,
-            speed: 1500
-        });
-
         var gallery_slider_alt = new Swiper('.gallery-slider-alt', {
             loop: true,
             navigation: {
@@ -243,4 +226,36 @@ jQuery(document).ready(function ($) {
         }, function(){
             $(document).find('.menu__block_images img').removeClass('active');
         });
+    
+        var gallery_slider = new Swiper('.gallery-slider', {
+                loop: true,
+                navigation: {
+                    nextEl: '.gallery-slider-nav__arrow-next',
+                    prevEl: '.gallery-slider-nav__arrow-prev',
+                },
+                pagination: {
+                    el: '.gallery-slider-nav__scrollbar',
+                    type: 'progressbar',
+                },
+                slidesPerView: 'auto',
+            speed: 1500,
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 35
+                },
+                375: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 35
+                },
+                414: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 63
+                },
+                1024: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 130
+                }
+            }
+            });
 });

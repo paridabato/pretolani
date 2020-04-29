@@ -5,7 +5,7 @@
 @if(!empty($pages))
 	@foreach($pages as $p)
 		@if($p['is_category'])
-			@php 
+			@php
 				$page = $p['category'];
 				$thumb = get_field('thumbnail', $page);
 			@endphp
@@ -18,9 +18,9 @@
 		            <div class="flex-block flex-block_pb">
 		                <div class="bg-image">
 		                	@if($p['is_category'])
-                    			<img src="{{ $thumb }}">
+                    			<img src="{{ $thumb }}" alt="">
 		                	@else
-		                		<img src="{{ get_the_post_thumbnail_url($page, 'full') }}">
+		                		<img src="{{ get_the_post_thumbnail_url($page, 'full') }}" alt="">
                     		@endif
                     	</div>
 		            </div>
