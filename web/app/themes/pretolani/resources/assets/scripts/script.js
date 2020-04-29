@@ -1,4 +1,4 @@
-$(document).ready(function () {
+jQuery(document).ready(function ($) {
     if ($(window).width() > 1023) {
         /* WOW START */
 
