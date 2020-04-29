@@ -1,7 +1,7 @@
 import gdpr from '../components/gdpr';
 import sign148 from '../util/148';
 import lazyload from '../util/lazyload';
-import script from '../script';
+// import script from '../script';
 
 export default {
   init() {
