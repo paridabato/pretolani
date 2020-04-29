@@ -43,7 +43,7 @@ Template Name: Teams
                                 <div class="image-block">
                                     @if(!empty($block['image']))
                                         <div class="image-block__image">
-                                            <img class="wow fadeInRight" data-wow-delay="1.5s" src="{{ $block['image'] }} alt="">
+                                            <img class="wow fadeInRight" data-wow-delay="1.5s" src="{{ $block['image'] }}" alt=" ">
                                         </div>
                                     @endif
 

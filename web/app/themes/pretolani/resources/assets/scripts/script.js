@@ -1,18 +1,14 @@
+import WOW from 'wow.js';
+import Swiper from 'swiper';
+
 $(document).ready(function () {
     if ($(window).width() > 1023) {
         /* WOW START */
-
-        wow = new WOW(
-            {
-                animateClass: 'animated',
-                // offset:       0,
-                callback: function (box) {
-                
-                }
-            }
-        );
+       var wow = new WOW({
+            animateClass: 'animated',
+            callback: function (box) { },
+        });
         wow.init();
-            
         /* WOW END */
 
         var quotes = [];
@@ -23,8 +19,8 @@ $(document).ready(function () {
             var lins = $(destination.item).find('.sep-lines');
             var lets = $(destination.item).find('.sep-letters');
 
-            lines[destination.index] = new SplitText(lins, { type: "lines" });
-            letters[destination.index] = new SplitText(lets, { type: "lines, chars" });
+            lines[destination.index] = new SplitText(lins, { type: 'lines' });
+            letters[destination.index] = new SplitText(lets, { type: 'lines, chars' });
                 
             gsap.from(lines[destination.index].lines, { duration: 0.5, y: 100, opacity: 0, stagger: 0.3 });
             gsap.from(letters[destination.index].chars, { duration: 0.5, y: 50, opacity: 0, stagger: 0.1 });
@@ -43,14 +39,10 @@ $(document).ready(function () {
 
                 //Scrolling
                 scrollingSpeed: 1500,
-                /*autoScrolling: true,*/
                 fitToSection: true,
                 fitToSectionDelay: 4000,
                 scrollBar: true,
-                /*        paddingTop: '1em',
-                        paddingBottom: '1em',*/
                 sectionSelector: '.section',
-                //            normalScrollElements: '.section-normal-scroll',
 
                 afterLoad: function (origin, destination, direction) {
 
@@ -61,11 +53,11 @@ $(document).ready(function () {
                     }
 
                     if ($(destination.item).hasClass('section-black')) {
-                        $('header').addClass("alt");
-                        $('#fp-nav').addClass("alt");
+                        $('header').addClass('alt');
+                        $('#fp-nav').addClass('alt');
                     } else {
-                        $('header').removeClass("alt");
-                        $('#fp-nav').removeClass("alt");
+                        $('header').removeClass('alt');
+                        $('#fp-nav').removeClass('alt');
                     }
 
                     if ($(document).find('.section_logo').length) {
@@ -89,11 +81,11 @@ $(document).ready(function () {
                     $(origin.item).find('.image-block').removeClass('active');
 
                     if ($(destination.item).hasClass('section-black')) {
-                        $('header').addClass("alt");
-                        $('#fp-nav').addClass("alt");
+                        $('header').addClass('alt');
+                        $('#fp-nav').addClass('alt');
                     } else {
-                        $('header').removeClass("alt");
-                        $('#fp-nav').removeClass("alt");
+                        $('header').removeClass('alt');
+                        $('#fp-nav').removeClass('alt');
                     }
 
                         
@@ -103,13 +95,13 @@ $(document).ready(function () {
                         $(origin.item).addClass('animated');
                         sep_animate_dest(origin);
                     }
-                }
+                },
             });
         }
 
         init_fullpage();
 
-        $(window).load(function () {
+        $(window).on('load', function () {
             setTimeout(function () {
                 if ($(logo_preloader).length) {
                     fullpage_api.moveTo(2);
@@ -128,7 +120,7 @@ $(document).ready(function () {
                 prevEl: '.section-slider-nav__arrow-prev',
             },
             slidesPerView: 1,
-            speed: 2500
+            speed: 2500,
         });
 
         var gallery_slider = new Swiper('.gallery-slider', {
@@ -143,10 +135,10 @@ $(document).ready(function () {
             },
             slidesPerView: 'auto',
             spaceBetween: 130,
-            speed: 1500
+            speed: 1500,
         });
 
-        $(window).load(function () {
+        $(window).on('load', function () {
             setTimeout(function () {
                 if ($(logo_preloader).length) {
                     fullpage_api.moveTo(2);
@@ -165,57 +157,43 @@ $(document).ready(function () {
                 prevEl: '.section-slider-nav__arrow-prev',
             },
             slidesPerView: 1,
-            speed: 2500
+            speed: 2500,
         });
 
-        var gallery_slider_alt = new Swiper('.gallery-slider-alt', {
-            loop: true,
-            navigation: {
-                nextEl: '.gallery-slider-nav__arrow-next',
-                prevEl: '.gallery-slider-nav__arrow-prev',
-            },
-            pagination: {
-                el: '.gallery-slider-nav__scrollbar',
-                type: 'progressbar',
-            },
-            slidesPerView: 'auto',
-            spaceBetween: 25,
-            speed: 1500
-        });
         $(document).on('click', '.copy-trigger', function () {
             copyText();
         });
 
         function copyText() {
-            var copyText = document.getElementById("copytext");
+            var copyText = document.getElementById('copytext');
             copyText.select();
             copyText.setSelectionRange(0, 99999); /*For mobile devices*/
-            document.execCommand("copy");
+            document.execCommand('copy');
             alert(copyText.placeholder);
         }
     } else {
         $('.page-contacts .header').addClass('alt visible');
 
-        $(window).load(function(){
+        $(window).on('load', function(){
                 $('section.section_logo').fadeOut();
             }
         );
         var email = $('#copytext').val();
         $('.page-contacts .title-link__text').click(function () {
-            window.location.href = "mailto:" + email;
+            window.location.href = 'mailto:' + email;
         });
     }
 
     $(document).on('click', '.menu-trigger', function(){
-            $(this).toggleClass("active");
-            $('.header').toggleClass("active");
-            $(document).find('.menu').toggleClass("active");
+            $(this).toggleClass('active');
+            $('.header').toggleClass('active');
+            $(document).find('.menu').toggleClass('active');
         });
 
         $('.menu__nav li').hover(function(){
             var _ind = $(this).index();
             $(document).find('.menu__block_images img').removeClass('active');
-            $(document).find('.menu__block_images img').eq(_ind).addClass("active");
+            $(document).find('.menu__block_images img').eq(_ind).addClass('active');
         }, function(){
             $(document).find('.menu__block_images img').removeClass('active');
         });
@@ -235,20 +213,43 @@ $(document).ready(function () {
             breakpoints: {
                 320: {
                     slidesPerView: 1,
-                    spaceBetween: 35
+                    spaceBetween: 35,
                 },
                 375: {
                     slidesPerView: 'auto',
-                    spaceBetween: 35
+                    spaceBetween: 35,
                 },
                 414: {
                     slidesPerView: 'auto',
-                    spaceBetween: 63
+                    spaceBetween: 63,
                 },
                 1024: {
                     slidesPerView: 'auto',
-                    spaceBetween: 130
-                }
-            }
-            });
+                    spaceBetween: 130,
+                },
+            },
+        });
+    
+        var gallery_slider_alt = new Swiper('.gallery-slider-alt', {
+                loop: true,
+                navigation: {
+                    nextEl: '.gallery-slider-nav__arrow-next',
+                    prevEl: '.gallery-slider-nav__arrow-prev',
+                },
+                pagination: {
+                    el: '.gallery-slider-nav__scrollbar',
+                    type: 'progressbar',
+                },
+                speed: 1500,
+                breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 25,
+                },
+                375: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 25,
+                },
+            },
+        });
 });
