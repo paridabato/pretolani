@@ -34,8 +34,8 @@ $(document).ready(function () {
         var logo_preloader = $(document).find('.section_logo');
 
         function init_fullpage() {
-
-            scts = $(document).find('section').length;
+            var nav;
+            var scts = $(document).find('section').length;
             if (scts > 2) {
                 nav = true
             } else {
