@@ -364,16 +364,19 @@
     }
 
     /* IDENTITY */
-    .page-identity .section_creators .section-title {
+    .page-identity .section_creators .section-title,
+    .page-teams .section_creators .section-title {
         margin-bottom: 12.3rem;
         padding-top: 15.5rem;
     }
 
-    .page-identity .section_creators .description {
+    .page-identity .section_creators .description,
+    .page-teams .section_creators .description {
         text-align: center;
     }
 
-    .page-identity .fw-image_halfslide img {
+    .page-identity .fw-image_halfslide img,
+    .page-teams .fw-image_halfslide img {
         height: 43.9rem;
         width: 100%;
     }
@@ -386,8 +389,13 @@
         flex: 0 0 auto;
     }
 
-    .gallery-slide {
+    .gallery-slide,
+    .gallery-slide-alt {
         width: 28.4rem;
+    }
+
+    .gallery-slider-nav {
+        margin-bottom: 4.5rem;
     }
 
     .gallery-slide__text {
@@ -400,13 +408,62 @@
         display: none;
     }
 
-    .gallery-slide__image {
+    .gallery-slide__image,
+    .gallery-slide-alt {
         height: 22.6rem;
     }
 
-    .gallery-slide__image img {
+    .gallery-slide__image img,
+    .gallery-slide-alt img {
         height: 100%;
         object-fit: cover;
+    }
+
+    /* TEAMS */
+
+    .page-teams section:nth-child(3) {
+        padding-bottom: 8.5rem;
+    }
+
+    .page-teams .section-black  {
+        padding-bottom: 9rem;
+    }
+
+    .page-teams .section-black .image-block__image {
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
+        height: 35rem;
+        margin-bottom: 3.3rem;
+    }
+
+    .page-teams .section-black .image-block__title {
+        margin-bottom: 3.6rem;
+    }
+
+    .page-teams .section-black .image-block__text {
+        font-size:  1.2rem;
+        line-height: 2.08;
+    }
+
+    .page-teams .section-black .image-block__image img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .page-teams .section-black .flex-row_swap {
+        width: 100%;
+    }
+
+    .page-teams .section-black .image-block__image {
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
+        height: 35rem;
+    }
+
+    .page-teams .section-black:last-child .flex-row {
+        width: fit-content;
+        margin: 0 0 0 auto;
     }
 }
 
