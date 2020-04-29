@@ -40,22 +40,22 @@ jQuery(document).ready(function ($) {
 
         function init_fullpage() {
 
+            scts = $(document).find('section').length;
+            if (scts > 2) {
+                nav = true
+            } else {
+                nav = false
+            }
+
             new fullpage('#main', {
                 menu: '#menu',
-                navigation: true,
+                navigation: nav,
                 navigationPosition: 'right',
                 navigationTooltips: ['01', '02', '03', '04', '05'],
-
-                //Scrolling
                 scrollingSpeed: 1500,
-                /*autoScrolling: true,*/
                 fitToSection: true,
                 fitToSectionDelay: 4000,
-                scrollBar: true,
-                        /*paddingTop: '2rem',*/
-                        /*paddingBottom: '4rem',*/
                 sectionSelector: '.section',
-                //            normalScrollElements: '.section-normal-scroll',
 
                 afterLoad: function (origin, destination, direction) {
 
@@ -64,6 +64,13 @@ jQuery(document).ready(function ($) {
 
                         sep_animate_dest(destination);
                     }
+
+                    if (!$(destination.item).find('.fw-image').hasClass('done')) {
+                        setTimeout(function(){
+                            $(destination.item).find('.fw-image').addClass('done');
+                        }, 100);
+                    }
+
 
                     if ($(destination.item).hasClass('section-black')) {
                         $('header').addClass("alt");
@@ -78,13 +85,16 @@ jQuery(document).ready(function ($) {
                             logo_preloader.remove();
                             fullpage_api.destroy('all');
                             init_fullpage();
-                            $('#fp-nav').addClass('visible');
-                            $('.header').addClass('visible');
                         }
+                    } else if ($(destination.item).hasClass('hide-logo')) {
+                        $('#fp-nav').removeClass('visible');
+                        $('.header').removeClass('visible');                            
                     } else {
                         $('#fp-nav').addClass('visible');
                         $('.header').addClass('visible');
                     }
+
+
                 },
                 onLeave: function (origin, destination, direction) {
                     $(origin.item).find('.fw-image_halfslide').addClass('active');
@@ -146,7 +156,7 @@ jQuery(document).ready(function ($) {
         $(window).load(function () {
             setTimeout(function () {
                 if ($(logo_preloader).length) {
-                    // fullpage_api.moveTo(2);
+                    fullpage_api.moveTo(2);
                 }
             }, 1000);
         });
