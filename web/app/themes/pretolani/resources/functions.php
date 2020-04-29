@@ -145,7 +145,7 @@ add_filter('wpcf7_autop_or_not', '__return_false');
 function load_js_css()
 {
     wp_enqueue_style('fonts', get_template_directory_uri() . '/assets/fonts/stylesheet.css');
-    // wp_enqueue_style('animate', get_template_directory_uri() . '/assets/styles/animate.css');
+    wp_enqueue_style('animate', get_template_directory_uri() . '/assets/styles/animate.css');
     wp_enqueue_style('fullpage', get_template_directory_uri() . '/assets/styles/fullpage.min.css');
     wp_enqueue_style('swiper', get_template_directory_uri() . '/assets/styles/swiper.min.css');
 

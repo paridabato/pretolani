@@ -23,6 +23,7 @@ $(document).ready(function () {
             var lets = $(destination.item).find('.sep-letters');
 
             lines[destination.index] = new SplitText(lins, { type: 'lines' });
+            lines_d[destination.index] = new SplitText(lins_d, { type: 'lines' });
             letters[destination.index] = new SplitText(lets, { type: 'lines, chars' });
                 
             gsap.from(lines[destination.index].lines, { duration: 0.5, y: 100, opacity: 0, stagger: 0.3 });
@@ -120,13 +121,16 @@ $(document).ready(function () {
 
         init_fullpage();
 
-        $(window).on('load', function () {
+        window.addEventListener('load', goToTwo, false);
+        window.addEventListener('ready', goToTwo, false);
+        function goToTwo() {
+            console.log('piska ne konsolitsa');
             setTimeout(function () {
                 if ($(logo_preloader).length) {
                     fullpage_api.moveTo(2);
                 }
             }, 1000);
-        });
+        }
 
         $(document).on('click', '.back-to-top', function () {
             fullpage_api.moveTo(1);
