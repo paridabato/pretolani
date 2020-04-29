@@ -3,6 +3,7 @@ import Swiper from 'swiper';
 
 $(document).ready(function () {
     if ($(window).width() > 1023) {
+
         /* WOW START */
        var wow = new WOW({
             animateClass: 'animated',
@@ -13,17 +14,20 @@ $(document).ready(function () {
 
         var quotes = [];
         var lines = [];
+        var lines_d = [];
         var letters = [];
 
         function sep_animate_dest(destination) {
             var lins = $(destination.item).find('.sep-lines');
+            var lins_d = $(destination.item).find('.sep-lines-delay');
             var lets = $(destination.item).find('.sep-letters');
 
             lines[destination.index] = new SplitText(lins, { type: 'lines' });
             letters[destination.index] = new SplitText(lets, { type: 'lines, chars' });
                 
             gsap.from(lines[destination.index].lines, { duration: 0.5, y: 100, opacity: 0, stagger: 0.3 });
-            gsap.from(letters[destination.index].chars, { duration: 0.5, y: 50, opacity: 0, stagger: 0.1 });
+            gsap.from(lines_d[destination.index].lines, { duration: 0.5, y: 100, opacity: 0, stagger: 0.3, delay: 1 });
+            gsap.from(letters[destination.index].chars, { duration: 0.5, y: 50, opacity: 0, stagger: 0.04 });
         }
 
 
@@ -31,13 +35,18 @@ $(document).ready(function () {
 
         function init_fullpage() {
 
+            scts = $(document).find('section').length;
+            if (scts > 2) {
+                nav = true
+            } else {
+                nav = false
+            }
+
             new fullpage('#main', {
                 menu: '#menu',
-                navigation: true,
+                navigation: nav,
                 navigationPosition: 'right',
                 navigationTooltips: ['01', '02', '03', '04', '05'],
-
-                //Scrolling
                 scrollingSpeed: 1500,
                 fitToSection: true,
                 fitToSectionDelay: 4000,
@@ -52,6 +61,13 @@ $(document).ready(function () {
                         sep_animate_dest(destination);
                     }
 
+                    if (!$(destination.item).find('.fw-image').hasClass('done')) {
+                        setTimeout(function(){
+                            $(destination.item).find('.fw-image').addClass('done');
+                        }, 100);
+                    }
+
+
                     if ($(destination.item).hasClass('section-black')) {
                         $('header').addClass('alt');
                         $('#fp-nav').addClass('alt');
@@ -65,13 +81,16 @@ $(document).ready(function () {
                             logo_preloader.remove();
                             fullpage_api.destroy('all');
                             init_fullpage();
-                            $('#fp-nav').addClass('visible');
-                            $('.header').addClass('visible');
                         }
+                    } else if ($(destination.item).hasClass('hide-logo')) {
+                        $('#fp-nav').removeClass('visible');
+                        $('.header').removeClass('visible');                            
                     } else {
                         $('#fp-nav').addClass('visible');
                         $('.header').addClass('visible');
                     }
+
+
                 },
                 onLeave: function (origin, destination, direction) {
                     $(origin.item).find('.fw-image_halfslide').addClass('active');

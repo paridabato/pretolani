@@ -14,7 +14,7 @@ Template Name: Identity
  @include('partials.block-main-section')
 
  @if(!empty($gallery))
-  <section class="page-section section section-black">
+  <section class="page-section section section_gallery section-black hide-logo">
     <div class="section__wrapper wrapper gallery-slider-wrap">
       <div class=" gallery-slider-nav">
         <div class="gallery-slider-nav__wrapper">
