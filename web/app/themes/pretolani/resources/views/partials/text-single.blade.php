@@ -1,4 +1,4 @@
-@empty($text_single))
+@empty($text_single)
     @php $text_single = get_field('text_single', $post->ID); @endphp
 @endempty
 
@@ -12,7 +12,7 @@
                 @endif
 
                 @if(!empty($text_single['author']))
-                	<p class="sep-lines">{!! $text_single['author'] !!}</p>
+                	<p class="sep-lines author-name">{!! $text_single['author'] !!}</p>
                 @endif
 
             </div>

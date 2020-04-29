@@ -1,35 +1,5 @@
-/*import {Wow} from 'wowjs';
-
-export default {
-
-init() {
-
-// JavaScript to be fired on all pages
-
-const wow = new Wow();
-
-wow.init();
-
-},
-
-finalize() {
-
-// JavaScript to be fired on all pages, after page specific JS is fired
-
-},
-
-};*/
-
 jQuery(document).ready(function ($) {
     if ($(window).width() > 1023) {
-        /* SEP LETTERS START */
-        /*    var $div = $('.sep-letters').clone().html('');
-            $('.sep-letters').contents().each(function(){
-            var spanClass = '';
-
-            if ($(this).is('span')) {
-                spanClass = $(this).attr('class');
-            }
 
         /* WOW START */
 
@@ -50,17 +20,21 @@ jQuery(document).ready(function ($) {
 
         var quotes = [];
         var lines = [];
+        var lines_d = [];
         var letters = [];
 
         function sep_animate_dest(destination) {
             var lins = $(destination.item).find('.sep-lines');
+            var lins_d = $(destination.item).find('.sep-lines-delay');
             var lets = $(destination.item).find('.sep-letters');
 
             lines[destination.index] = new SplitText(lins, { type: "lines" });
+            lines_d[destination.index] = new SplitText(lins_d, { type: "lines" });
             letters[destination.index] = new SplitText(lets, { type: "lines, chars" });
                 
             gsap.from(lines[destination.index].lines, { duration: 0.5, y: 100, opacity: 0, stagger: 0.3 });
-            gsap.from(letters[destination.index].chars, { duration: 0.5, y: 50, opacity: 0, stagger: 0.1 });
+            gsap.from(lines_d[destination.index].lines, { duration: 0.5, y: 100, opacity: 0, stagger: 0.3, delay: 1 });
+            gsap.from(letters[destination.index].chars, { duration: 0.5, y: 50, opacity: 0, stagger: 0.04 });
         }
 
 
@@ -80,8 +54,8 @@ jQuery(document).ready(function ($) {
                 fitToSection: true,
                 fitToSectionDelay: 4000,
                 scrollBar: true,
-                /*        paddingTop: '1em',
-                        paddingBottom: '1em',*/
+                        /*paddingTop: '2rem',*/
+                        /*paddingBottom: '4rem',*/
                 sectionSelector: '.section',
                 //            normalScrollElements: '.section-normal-scroll',
 
@@ -142,14 +116,6 @@ jQuery(document).ready(function ($) {
 
         init_fullpage();
 
-        $(window).load(function () {
-            setTimeout(function () {
-                if ($(logo_preloader).length) {
-                    fullpage_api.moveTo(2);
-                }
-            }, 1000);
-        });
-
         $(document).on('click', '.back-to-top', function () {
             fullpage_api.moveTo(1);
         });
@@ -182,7 +148,7 @@ jQuery(document).ready(function ($) {
         $(window).load(function () {
             setTimeout(function () {
                 if ($(logo_preloader).length) {
-                    fullpage_api.moveTo(2);
+                    // fullpage_api.moveTo(2);
                 }
             }, 1000);
         });

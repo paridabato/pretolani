@@ -16,7 +16,7 @@
             <div class="flex-block flex-block_padd">
                 <div class="flex-block__content">
                 	@if(!empty($mainblock['text']))
-                    	<div class="quote-text description sep-lines">{!! $mainblock['text'] !!}</div>
+                    	<div class="quote-text description sep-lines-delay">{!! $mainblock['text'] !!}</div>
                     @endif
                 </div>
             </div>
