@@ -25,7 +25,7 @@
     @if(!empty($mainblock['image']))
     <div class="fw-image-wrapper">
         <div class="fw-image fw-image_halfslide fw">
-            <img src="{{ $mainblock['image'] }}">
+            <img src="{{ $mainblock['image'] }}" alt="">
         </div>
     </div>
     @endif

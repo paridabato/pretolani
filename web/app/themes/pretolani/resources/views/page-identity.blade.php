@@ -30,7 +30,7 @@ Template Name: Identity
               <div class="gallery-slide">
                 <div class="gallery-slide__title">{!! $g['title'] !!}</div>
                 <div class="gallery-slide__text">{!! $g['text'] !!}</div>
-                <div class="gallery-slide__image"><img src="{{ $g['image'] }}"/></div>
+                <div class="gallery-slide__image"><img src="{{ $g['image'] }}" alt=""/></div>
               </div>
             </div>
           @endforeach

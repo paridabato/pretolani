@@ -25,7 +25,7 @@ Template Name: Teams
                         <div class="swiper-wrapper">
                             @foreach ($gallery as $g)
                                 <div class="swiper-slide">
-                                    <div class="gallery-slide-alt"><img src="{{ $g['url'] }}"/></div>
+                                    <div class="gallery-slide-alt"><img src="{{ $g['url'] }}" alt=""/></div>
                                 </div>
                             @endforeach
                         </div>
@@ -43,7 +43,7 @@ Template Name: Teams
                                 <div class="image-block">
                                     @if(!empty($block['image']))
                                         <div class="image-block__image">
-                                            <img class="wow fadeInRight" data-wow-delay="1.5s" src="{{ $block['image'] }}">
+                                            <img class="wow fadeInRight" data-wow-delay="1.5s" src="{{ $block['image'] }} alt="">
                                         </div>
                                     @endif
 
