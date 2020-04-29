@@ -2,10 +2,10 @@
     @php $mainblock = get_field('main_block', $post->ID) @endphp
 @endif
 
-<section class="page-section section section_creators">
+<section class="page-section section section_main">
     <div class="section__wrapper wrapper">
         <div class="flex-row flex-row_relative">
-            <div class="flex-block">
+            <div class="flex-block section_main__flex-block">
             	@if(!empty($mainblock['title']))
                 	<h1 class="section-title sep-letters">{!! $mainblock['title'] !!}</h1>
                 @endif
@@ -25,6 +25,8 @@
     @if(!empty($mainblock['image']))
     <div class="fw-image-wrapper">
         <div class="fw-image fw-image_halfslide fw">
+            <div class="fw-image__border fw-image__border_horizontal"></div>
+            <div class="fw-image__border fw-image__border_vertical"></div>
             <img src="{{ $mainblock['image'] }}">
         </div>
     </div>
