@@ -220,6 +220,7 @@ iframe {
 .flex-block_text .flex-block__content {
     box-sizing: border-box;
     padding: 0 12rem;
+    align-self: center;
 }
 
 .flex-block_pb {
@@ -1247,3 +1248,118 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 .gdpr {
     position: relative;
 }
+
+
+/* fp-nav START */
+
+body #fp-nav {
+    margin: 0 !important;
+    transform: translateY(-50%);
+}
+
+body #fp-nav.fp-right {
+    right: 50px;
+}
+
+body #fp-nav ul {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    /*background: #e5e5e5;*/
+    background: rgba(0, 0, 0, 0.2);
+    transition: all 0.8s;
+}
+
+body #fp-nav.alt ul {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+body #fp-nav ul li {
+    width: auto;
+    height: auto;
+    margin: 0;
+    flex: 1;
+}
+
+body #fp-nav ul li a {
+    display: block;
+    height: 100%;
+    transition: all 1s;
+}
+
+body #fp-nav ul li.current-active ~ li a {
+    height: 0;
+    transition-duration: 0s;
+}
+
+/*#fp-nav ul li a.active {
+height: 100%;
+transition: all 1s;
+}*/
+
+
+body #fp-nav ul li a span {
+    display: none;
+}
+
+body #fp-nav ul li a span.fp-sr-only {
+    display: block;
+    margin: 0;
+    width: 1px;
+    height: 100%;
+    border-radius: 0;
+    background: #000;
+    opacity: 1;
+    position: static;
+    transition: all 1.5s;
+}
+
+body #fp-nav ul li a.active span.fp-sr-only {
+/*    height: 100%;*/
+}
+
+
+body #fp-nav ul li .fp-tooltip.fp-right {
+    color: #000;
+    width: 0;
+    height: 0;
+    overflow: visible;
+    letter-spacing: 1px;
+    transform: translateX(50%);
+    position: relative;
+    left: auto;
+    right: 7px;
+    top: 5px;
+    transition: color 0.8s;
+    margin-top: auto;
+}
+
+body #fp-nav ul li a.active ~ .fp-tooltip,
+body #fp-nav ul li:last-child .fp-tooltip{
+    opacity: 1;
+}
+
+body #fp-nav ul li:last-child .fp-tooltip {
+    position: absolute;
+    top: 100%;
+}
+
+body #fp-nav.alt ul li a span.fp-sr-only {
+    background-color: #fff;
+    color: #fff;
+}
+
+body #fp-nav.alt ul li .fp-tooltip.fp-right { 
+    color: #fff;
+}
+
+body #fp-nav {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+body #fp-nav.visible {
+    opacity: 1;
+}
+
+/* fp-nav END */
