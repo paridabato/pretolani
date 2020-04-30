@@ -1,7 +1,6 @@
-/*import WOW from 'wow.js';
-import Swiper from 'swiper';
-import fullpage from 'fullpage.js';*/
-
+// import WOW from 'wow.js';
+// import Swiper from 'swiper';
+// import fullpage from 'fullpage.js';
 // import {gsap} from 'gsap';
 // import {SplitText} from 'gsap/all';
 // gsap.registerPlugin(SplitText)
@@ -193,12 +192,19 @@ import fullpage from 'fullpage.js';*/
         alert(copyText.placeholder);
       }
     } else {
-      $('.page-contacts .header').addClass('alt visible');
+        $('.back-to-top').on('click', function () {
+           $('html, body').animate({
+               scrollTop: 0,
+            }, 1000)
+        });
 
-       $(window).on('load', function () {
+        $('.page-contacts .header').addClass('alt visible');
+        $('.category .header').addClass('alt visible');
+
+      $(window).on('load', function () {
           $('section.section_logo').fadeOut();
         }
-       );
+      );
       var email = $('#copytext').val();
       $('.page-contacts .title-link__text').click(function () {
         window.location.href = 'mailto:' + email;
@@ -274,4 +280,4 @@ import fullpage from 'fullpage.js';*/
       },
     });
   });
-//}
+// }

@@ -163,7 +163,7 @@
     .section-title {
         font-size: 4rem;
         text-align: center;
-        padding-top: 9.5rem;
+        padding-top: 15.5rem;
         margin-bottom: 8.5rem;
     }
 
@@ -483,6 +483,88 @@
     .page-teams .section-black:last-child .flex-row {
         width: fit-content;
         margin: 0 0 0 auto;
+    }
+
+    /* REALISATIONS */
+    .category .header {
+        background-color: black;
+    }
+
+    .category .page-section.section_nav {
+        padding-top: 12.8rem;
+        padding-bottom: 14.5rem;
+    }
+
+    .category .page-section:nth-child(3) .flex-row img {
+        margin-top: -6.5rem;
+    }
+    
+    .subcats-nav__item {
+        margin: 0;
+    }
+
+    .subcats-nav__item_sep {
+        margin: 0 2.3rem;
+        border-width: 1px;
+        height: 1.5rem;
+        opacity: 0.3;
+    }
+
+     .section_nav .title-link:first-child::after,
+     .section_nav .title-link:last-child::before {
+        display: none;
+    }
+
+    .subcats-nav__item:last-child::after {
+        left: 0;
+        transition: none;
+    }
+
+    .subcats-nav__item_active:last-child::after {
+        opacity: 1;
+    }
+    
+    .subcats-nav__item_link::before {
+        margin-right: 1.7rem;
+    }
+
+    .subcats-nav__item_link::after {
+        margin-left: 1.7rem;
+    }
+
+    .category .page-section {
+        padding-bottom: 8.5rem;
+    }
+
+    .category .page-section .flex-row img {
+        margin-left: -1.5rem;
+        margin-bottom: 4.2rem;
+    }
+
+    .category .page-section .flex-row_swap img {
+        margin-left: auto;
+        margin-right: -1.5rem;
+    }
+
+    .category .flex-block_bottom .flex-block__content {
+        padding: 0;
+    }
+
+    .category .flex-block_bottom .section-title {
+        text-align: left;
+        padding-top: 0;
+        margin-bottom: 2.1rem;
+    }
+
+    .category .page-section .flex-row_swap .flex-block_bottom {
+        padding-left: 1.5rem;
+        box-sizing: border-box;
+    }
+
+    .back-to-top__text {
+        font-size: 1.2rem;
+        line-height: 1.25;
+        font-weight: 500;
     }
 }
 
