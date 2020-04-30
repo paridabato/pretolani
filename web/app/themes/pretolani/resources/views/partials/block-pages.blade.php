@@ -24,7 +24,7 @@
                     		@endif
                     	</div>
 		            </div>
-		            <div class="flex-block flex-block_text">
+		            <div class="flex-block flex-block_padd flex-block_text">
 		                <div class="flex-block__content">
 		                    <div class="title-block">
 	                        	<div class="section-title sep-letters">

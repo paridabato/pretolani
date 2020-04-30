@@ -6,8 +6,8 @@
 // gsap.registerPlugin(SplitText)
 
 
-// export default () => {
-  $(document).ready(function () {
+//export default () => {
+  jQuery(document).ready(function ($) {
     if ($(window).width() > 1023) {
 
       /* WOW START */
@@ -64,6 +64,9 @@
           licenseKey: 'YOUR_KEY_HERE',
 
           afterLoad: function (origin, destination, direction) {
+                /*$(document).find('#fp-nav li').removeClass('current-active')
+                $(document).find('#fp-nav a.active').closest('li').addClass('current-active');*/
+
 
             if (!$(destination.item).hasClass('animated')) {
               $(destination.item).addClass('animated');
@@ -92,9 +95,6 @@
                 fullpage_api.destroy('all');
                 init_fullpage();
               }
-            } else if ($(destination.item).hasClass('hide-logo')) {
-              $('#fp-nav').removeClass('visible');
-              $('.header').removeClass('visible');
             } else {
               $('#fp-nav').addClass('visible');
               $('.header').addClass('visible');
@@ -103,6 +103,10 @@
 
           },
           onLeave: function (origin, destination, direction) {
+ /*           setTimeout(function(){
+                $(document).find('#fp-nav li').removeClass('current-active')
+                $(document).find('#fp-nav a.active').closest('li').addClass('current-active');
+            }, 50);*/
             $(origin.item).find('.fw-image_halfslide').addClass('active');
             $(destination.item).find('.fw-image_halfslide').removeClass('active');
 
@@ -116,6 +120,15 @@
               $('header').removeClass('alt');
               $('#fp-nav').removeClass('alt');
             }
+
+            if ($(destination.item).hasClass('hide-logo')) {
+              $('#fp-nav').removeClass('visible');
+              $('.header').removeClass('visible');
+            } /*else {
+              $('#fp-nav').addClass('visible');
+              $('.header').addClass('visible');
+            }*/
+
 
 
           },
@@ -165,28 +178,6 @@
         slidesPerView: 'auto',
         spaceBetween: 130,
         speed: 1500,
-      });
-
-      $(window).on('load', function () {
-        setTimeout(function () {
-          if ($(logo_preloader).length) {
-            fullpage_api.moveTo(2);
-          }
-        }, 1000);
-      });
-
-      $(document).on('click', '.back-to-top', function () {
-        fullpage_api.moveTo(1);
-      });
-
-      var mySwiper = new Swiper('.section-slider', {
-        loop: true,
-        navigation: {
-          nextEl: '.section-slider-nav__arrow-next',
-          prevEl: '.section-slider-nav__arrow-prev',
-        },
-        slidesPerView: 1,
-        speed: 2500,
       });
 
       $(document).on('click', '.copy-trigger', function () {
