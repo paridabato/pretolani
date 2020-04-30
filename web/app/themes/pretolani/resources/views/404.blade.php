@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
   <div class="onepage" id="main">
-    <section class="page-section section section_logo">
+    <section class="page-section section section_404">
       <div class="section__wrapper wrapper">
         <div class="logo-wrap">
           <div class="logo-wrap__block">

@@ -21,6 +21,10 @@
         height: auto;
         box-sizing: border-box;
     }
+    
+    .section-black  .flex-block_pb {
+        padding-bottom: 0;
+    }
     /* PRELOADER */
     .section_logo {
         position: fixed;
@@ -49,11 +53,12 @@
         color: #1b1515;
     }
 
-    /* HEADR */
+    /* HEADER */
     .header {
         opacity: 1;
         padding: 2.2rem 0;
         background-color: #fff;
+        visibility: visible;
     }
 
     .header__wrapper {
@@ -165,6 +170,7 @@
     .quote-text {
         padding: 2.5rem 1.5rem 2.5rem;
         width: 100%;
+        visibility: visible;
     }
 
     .description, .description p, .quote-text {
@@ -180,8 +186,17 @@
         height: 2.5em;
     }
 
+    .fw-image__border {
+        display: none;
+    }
+
     .fw-image_halfslide {
         position: static;
+    }
+
+    .home .fw-image_halfslide img {
+        height: 43.9rem;
+        margin-bottom: 8.5rem;
     }
 
     .home section:nth-child(3){
@@ -296,10 +311,6 @@
         min-height: 100vh;
     }
 
-    .page-contacts .section-black {
-        min-height: 100vh;
-    }
-
     .page-contacts .section-black .wrapper {
         padding-top: 21vh;
     }
@@ -375,6 +386,10 @@
         text-align: center;
     }
 
+     .page-identity .section_main .description{
+        text-align: center;
+     }
+
     .page-identity .fw-image_halfslide img,
     .page-teams .fw-image_halfslide img {
         height: 43.9rem;
@@ -449,6 +464,10 @@
         height: 100%;
         object-fit: cover;
         object-position: center;
+    }
+
+    .page-teams .image-block__space {
+        display: none;
     }
 
     .page-teams .section-black .flex-row_swap {
