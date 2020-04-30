@@ -9,7 +9,7 @@ import routes from './routes';
 // Fire up service worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
+    navigator.serviceWorker.register('/app/themes/pretolani/dist/sw.js')
     // .then(registration => {
     //   console.log('SW registered: ', registration);
     // })
