@@ -155,31 +155,6 @@
         fullpage_api.moveTo(1);
       });
 
-      var mySwiper = new Swiper('.section-slider', {
-        loop: true,
-        navigation: {
-          nextEl: '.section-slider-nav__arrow-next',
-          prevEl: '.section-slider-nav__arrow-prev',
-        },
-        slidesPerView: 1,
-        speed: 2500,
-      });
-
-      var gallery_slider = new Swiper('.gallery-slider', {
-        loop: true,
-        navigation: {
-          nextEl: '.gallery-slider-nav__arrow-next',
-          prevEl: '.gallery-slider-nav__arrow-prev',
-        },
-        pagination: {
-          el: '.gallery-slider-nav__scrollbar',
-          type: 'progressbar',
-        },
-        slidesPerView: 'auto',
-        spaceBetween: 130,
-        speed: 1500,
-      });
-
       $(document).on('click', '.copy-trigger', function () {
         copyText();
       });
@@ -198,15 +173,14 @@
             }, 1000)
         });
 
-        $('.page-contacts .header').addClass('alt visible');
-        $('.category .header').addClass('alt visible');
+        $('.page-contacts .header, .category .header, .page-mentions .header').addClass('alt visible');
 
       $(window).on('load', function () {
           $('section.section_logo').fadeOut();
         }
       );
       var email = $('#copytext').val();
-      $('.page-contacts .title-link__text').click(function () {
+      $('.page-contacts .title-link__text, .single .title-link__text').click(function () {
         window.location.href = 'mailto:' + email;
       });
     }
@@ -223,6 +197,16 @@
       $(document).find('.menu__block_images img').eq(_ind).addClass('active');
     }, function () {
       $(document).find('.menu__block_images img').removeClass('active');
+    });
+      
+    var mySwiper = new Swiper('.section-slider', {
+        loop: true,
+        navigation: {
+          nextEl: '.section-slider-nav__arrow-next',
+          prevEl: '.section-slider-nav__arrow-prev',
+        },
+        slidesPerView: 1,
+        speed: 2500,
     });
 
     var gallery_slider = new Swiper('.gallery-slider', {

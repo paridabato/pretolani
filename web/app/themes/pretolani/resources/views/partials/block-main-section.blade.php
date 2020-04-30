@@ -1,7 +1,6 @@
 @if(empty($mainblock))
     @php $mainblock = get_field('main_block', $post->ID) @endphp
 @endif
-
 <section class="page-section section section_main">
     <div class="section__wrapper wrapper">
         <div class="flex-row flex-row_relative">

@@ -5,8 +5,19 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="onepage" id="main">
-
+    <div class="onepage" id="main">
+    @include('partials.loader')
+    @if(wp_is_mobile())
+    <section class="page-section section section_main mobile-only">
+        <div class="section__wrapper wrapper">
+            <div class="flex-row flex-row_relative">
+                <div class="flex-block section_main__flex-block">
+                    <h1 class="section-title sep-letters">{!! the_title() !!}</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    @endif
 	@if(!empty($slider))
 	    <section class="page-section section section_nav section-black">
 	        <div class="section-slider-wrap fw">
@@ -32,7 +43,7 @@
 	    </section>
     @endif
     
-    <section class="page-section section">
+    <section class="page-section section single-content-section">
         <div class="section__wrapper wrapper">
             <div class="flex-row">
                 <div class="flex-block flex-block_padd">
@@ -55,7 +66,7 @@
     @if(!empty($p))
 	    <section class="page-section section">
 	        <div class="section__wrapper wrapper">
-	            <div class="flex-row flex-row_swap">
+	            <div class="flex-row side-row flex-row_swap">
 	                <div class="flex-block">
 	                    <div class="bg-image bg-image_bottom"><img src="{{ get_the_post_thumbnail_url($p->ID) }}"></div>
 	                </div>
