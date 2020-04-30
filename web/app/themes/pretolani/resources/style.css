@@ -614,7 +614,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 
 /* logo screen START */
 
-.section_logo {
+.section_logo,
+.section_404 {
     background: #f3f3f3;
 }
 
@@ -1241,4 +1242,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 
 .page-contacts .title-wrap .section-title {
     margin-bottom: 5.5rem;
+}
+
+.gdpr {
+    position: relative;
 }
