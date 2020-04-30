@@ -28,7 +28,7 @@
         @php $query->the_post(); @endphp
         <section class="page-section section">
             <div class="section__wrapper">
-                <div class="flex-row {{ ($it % 2 == 1) ? '' : 'flex-row_swap' }}">
+                <div class="flex-row side-row {{ ($it % 2 == 1) ? '' : 'flex-row_swap' }}">
                     <div class="flex-block">
                         <div class="bg-image bg-image_bottom"><img src="{{ get_the_post_thumbnail_url() }}" alt=""></div>
                     </div>

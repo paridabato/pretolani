@@ -14,7 +14,7 @@
 		@endif
 		<section class="page-section section section-{{ $p['background'] }}">
 		    <div class="section__wrapper">
-		        <div class="flex-row @if($p['swap_position']) flex-row_swap @endif">
+		        <div class="flex-row side-row @if($p['swap_position']) flex-row_swap @endif">
 		            <div class="flex-block flex-block_pb">
 		                <div class="bg-image">
 		                	@if($p['is_category'])
