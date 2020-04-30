@@ -1242,3 +1242,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 .page-contacts .title-wrap .section-title {
     margin-bottom: 5.5rem;
 }
+
+.gdpr {
+    position: relative;
+}

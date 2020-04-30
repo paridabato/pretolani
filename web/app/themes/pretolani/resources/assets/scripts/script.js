@@ -122,13 +122,16 @@ $(document).ready(function () {
 
         init_fullpage();
 
-        $(window).on('load', function () {
+        window.addEventListener('load', goToTwo, false);
+        window.addEventListener('ready', goToTwo, false);
+        function goToTwo() {
+            console.log('piska ne konsolitsa');
             setTimeout(function () {
                 if ($(logo_preloader).length) {
                     fullpage_api.moveTo(2);
                 }
             }, 1000);
-        });
+        }
 
         $(document).on('click', '.back-to-top', function () {
             fullpage_api.moveTo(1);
