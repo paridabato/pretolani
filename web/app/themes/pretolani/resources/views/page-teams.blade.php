@@ -8,6 +8,7 @@ Template Name: Teams
 @extends('layouts.app')
 @section('content')
     <div class="onepage" id="main">
+
         @include('partials.loader')
         @include('partials.block-main-section')
 
@@ -35,15 +36,16 @@ Template Name: Teams
         @endif
 
         @if(!empty($imageblocks['block']))
-            @foreach($imageblocks['block'] as $block)
-                <section class="page-section section section-{{ $block['background'] }}">
-                    <div class="section__wrapper wrapper">
-                        <div class="flex-row @if($block['swap_position']) flex-row_swap @endif">
+            <section class="page-section section section-black ov-hidden">
+                <div class="section__wrapper wrapper">
+                    <div class="flex-row image-block-alt-wrap">
+                        @php $it = 1; @endphp
+                        @foreach($imageblocks['block'] as $block)
                             <div class="flex-block">
-                                <div class="image-block">
+                                <div class="image-block-alt {{ ($it % 2 == 1) ? 'image-block-alt_top' : 'image-block-alt_bottom' }}">
                                     @if(!empty($block['image']))
                                         <div class="image-block__image">
-                                            <img class="wow fadeInRight" data-wow-delay="1.5s" src="{{ $block['image'] }}" alt=" ">
+                                            <img src="{{ $block['image'] }}" alt=" ">
                                         </div>
                                     @endif
 
@@ -62,11 +64,11 @@ Template Name: Teams
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex-block"></div>
-                        </div>
+                            @php $it++; @endphp
+                        @endforeach
                     </div>
-                </section>
-            @endforeach
+                </div>
+            </section>
         @endif
 
         @include('partials.block-pages')

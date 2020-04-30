@@ -32,6 +32,10 @@ iframe {
     opacity: 0;
 }
 
+.ov-hidden {
+    overflow: hidden;
+}
+
 .fp-section.fp-table, .fp-slide.fp-table {
     display: flex;
     flex-direction: column;
@@ -473,7 +477,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 .fw-image__border_horizontal::before,
 .fw-image__border_horizontal::after {
     width: 100%;
-    height: 20%;
+    height: 30%;
     top: 0;
     left: 0;
 }
@@ -485,7 +489,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 
 .fw-image__border_vertical::before,
 .fw-image__border_vertical::after {
-    width: 20%;
+    width: 30%;
     height: 100%;
     top: 0;
     left: 0;
@@ -1233,6 +1237,38 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
     text-transform: initial;
 }
 
+.image-block-alt-wrap {
+    justify-content: space-between;
+}
+
+.image-block-alt-wrap .flex-block{ 
+    width: 47%;
+}
+
+.image-block-alt {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    transition: all 3s ease-out;
+}
+
+.image-block-alt_top {
+    transform: translateY(-150%);
+}
+
+.image-block-alt_bottom {
+    transform: translateY(150%);
+}
+
+.section.active .image-block-alt  {
+    transform: translateY(0);
+}
+
+/*.image-block-alt_top {
+    padding-right: 5rem;
+}
+*/
 /* image block END */
 
 
